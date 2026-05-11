@@ -1,0 +1,87 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    name: Build CV PDFs
+    runs-on: ubuntu-24.04
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pdf/requirements.txt
+
+      - name: Install Python deps
+        run: pip install -r pdf/requirements.txt
+
+      - name: Set up Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: "0.13.1"
+
+      - name: Build all PDFs
+        run: python pdf/build.py --all
+
+      - name: List artifacts
+        run: ls -lh pdf/dist/
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdfs
+          path: pdf/dist/*.pdf
+          retention-days: 30
+
+      - name: Get tag name
+        id: tag
+        if: startsWith(github.ref, 'refs/tags/')
+        run: echo "tag=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-24.04
+    needs: build-pdf
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download PDF artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: cv-pdfs
+          path: dist/
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.build-pdf.outputs.tag }}
+          name: "CV ${{ needs.build-pdf.outputs.tag }}"
+          body: |
+            Automatically generated CV PDFs.
+
+            | File | Description |
+            |------|-------------|
+            | `cv_it.pdf` | CV italiano (hybrid emphasis) |
+            | `cv_en.pdf` | CV inglese (hybrid emphasis) |
+            | `cv_it_leadership.pdf` | CV italiano — leadership focus |
+            | `cv_it_engineering.pdf` | CV italiano — engineering focus |
+            | `cv_en_leadership.pdf` | CV inglese — leadership focus |
+            | `cv_en_engineering.pdf` | CV inglese — engineering focus |
+          files: dist/*.pdf
+          draft: false
+          prerelease: false

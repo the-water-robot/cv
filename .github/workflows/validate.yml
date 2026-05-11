@@ -1,0 +1,26 @@
+name: Validate YAML Schema
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    name: JSON Schema validation
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install ajv-cli
+        run: npm install --global ajv-cli@5.0.0 ajv-formats@3.0.1
+
+      - name: Validate cv.it.yaml
+        run: ajv validate -s content/schema.json -d content/cv.it.yaml --spec=draft7
+
+      - name: Validate cv.en.yaml
+        run: ajv validate -s content/schema.json -d content/cv.en.yaml --spec=draft7

@@ -1,0 +1,84 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build Astro site
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      # ── PDF artifacts (canonical copies for the site) ───────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pdf/requirements.txt
+
+      - name: Install Python deps
+        run: pip install -r pdf/requirements.txt
+
+      - name: Set up Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: "0.13.1"
+
+      - name: Build PDFs
+        run: python pdf/build.py --all
+
+      - name: Copy PDFs to web/public
+        run: |
+          cp pdf/dist/cv_it.pdf web/public/cv_it.pdf
+          cp pdf/dist/cv_en.pdf web/public/cv_en.pdf
+
+      # ── Astro build ─────────────────────────────────────────────────────────
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install Node deps
+        working-directory: web
+        run: npm ci
+
+      - name: Lint
+        working-directory: web
+        run: npm run lint
+
+      - name: Build Astro
+        working-directory: web
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    name: Deploy to Pages
+    runs-on: ubuntu-24.04
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
