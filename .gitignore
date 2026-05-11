@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ruff_cache/
+pdf/dist/
+
+# Node
+node_modules/
+web/dist/
+web/.astro/
+web/.cache/
+
+# Build artifacts
+*.pdf
+dist/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
