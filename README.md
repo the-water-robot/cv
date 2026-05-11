@@ -1,13 +1,13 @@
 # Pietro Ilacqua — CV Monorepo
 
-[![Validate YAML](https://github.com/<da_compilare>/cv/actions/workflows/validate.yml/badge.svg)](https://github.com/<da_compilare>/cv/actions/workflows/validate.yml)
-[![Build PDF](https://github.com/<da_compilare>/cv/actions/workflows/pdf.yml/badge.svg)](https://github.com/<da_compilare>/cv/actions/workflows/pdf.yml)
-[![Deploy Pages](https://github.com/<da_compilare>/cv/actions/workflows/pages.yml/badge.svg)](https://github.com/<da_compilare>/cv/actions/workflows/pages.yml)
+[![Validate YAML](https://github.com/the-water-robot/cv/actions/workflows/validate.yml/badge.svg)](https://github.com/the-water-robot/cv/actions/workflows/validate.yml)
+[![Build PDF](https://github.com/the-water-robot/cv/actions/workflows/pdf.yml/badge.svg)](https://github.com/the-water-robot/cv/actions/workflows/pdf.yml)
+[![Deploy Pages](https://github.com/the-water-robot/cv/actions/workflows/pages.yml/badge.svg)](https://github.com/the-water-robot/cv/actions/workflows/pages.yml)
 
 | | |
 |---|---|
-| **PDF** | [Latest Release](https://github.com/<da_compilare>/cv/releases/latest) |
-| **Web** | [<da_compilare>.github.io/cv](https://<da_compilare>.github.io/cv) |
+| **PDF** | [Latest Release](https://github.com/the-water-robot/cv/releases/latest) |
+| **Web** | [the-water-robot.github.io/cv](https://the-water-robot.github.io/cv) |
 
 ---
 
