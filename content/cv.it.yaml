@@ -115,11 +115,13 @@ skills:
     - Robotica industriale e cobot
     - Automazione e controllo
     - Intelligenza artificiale applicata
+    - Coding agents e LLM systems
     - Product engineering
   technologies:
     abb:       [RAPID, RobotStudio, OmniCore, IRC5, EGM, RWS, Force Control]
     languages: [Python, C/C++, TypeScript, Rust]
     frameworks: [ROS, Tauri, Next.js, Astro]
+    ai_agents: [Claude SDK, MCP, LangChain, LangGraph, tool use, prompt engineering]
     tools:     [Git, GitHub Actions, Azure DevOps, VS Code Extension API]
 
 projects:

@@ -26,11 +26,6 @@ export function SkillsCloud({ technologies, onTagClick }: Props) {
                 className={`tag${active === item ? " active" : ""}`}
                 onClick={() => handleClick(item)}
                 aria-pressed={active === item}
-                style={{
-                  background: "none",
-                  font: "inherit",
-                  cursor: "pointer",
-                }}
               >
                 {item}
               </button>

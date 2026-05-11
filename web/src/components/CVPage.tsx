@@ -132,12 +132,12 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
             <h2 className="section-title">{labels.sectionProjects}</h2>
             {data.projects.map((proj, i) => (
               <div key={i} style={{ marginBottom: "0.85rem" }}>
-                <div style={{ fontWeight: 600, fontSize: "0.9rem" }}>
+                <div style={{ fontWeight: 600, fontSize: "0.8rem", fontFamily: "var(--font-mono)", color: "var(--text)" }}>
                   {proj.url && !proj.url.startsWith("<") ? (
                     <a href={proj.url} rel="noopener noreferrer">{proj.name}</a>
                   ) : proj.name}
                 </div>
-                <div style={{ fontSize: "0.825rem", color: "var(--color-text-muted)" }}>
+                <div style={{ fontSize: "0.75rem", color: "var(--text-dim)" }}>
                   {proj.description}
                 </div>
               </div>
@@ -147,9 +147,9 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
           <section>
             <h2 className="section-title">{labels.sectionLanguages}</h2>
             {data.languages.map((l) => (
-              <div key={l.name} style={{ fontSize: "0.875rem", marginBottom: "0.3rem" }}>
-                <strong>{l.name}</strong>{" "}
-                <span style={{ color: "var(--color-text-muted)" }}>{l.level}</span>
+              <div key={l.name} style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono)", marginBottom: "0.4rem" }}>
+                <span style={{ color: "var(--text)" }}>{l.name}</span>{" "}
+                <span style={{ color: "var(--text-faint)" }}>{"// "}{l.level}</span>
               </div>
             ))}
           </section>

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ln -s ../../../../content/cv.it.yaml cv.it.yaml)",
+      "Bash(ln -s ../../../../content/cv.en.yaml cv.en.yaml)",
+      "Bash(git commit -m ' *)",
+      "Bash(grep -v '^$')",
+      "Bash(gh auth *)",
+      "Bash(find /Users/pit/dev -maxdepth 2 -name \".git\" -type d 2>/dev/null)",
+      "Read(//Users/pit/dev/**)",
+      "Read(//Users/pit/**)",
+      "Bash(ls -la /Users/pit/.git* 2>/dev/null)",
+      "Bash(security find-internet-password *)"
+    ]
+  }
+}

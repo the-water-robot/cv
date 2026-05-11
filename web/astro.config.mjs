@@ -7,9 +7,4 @@ export default defineConfig({
   base: "/cv",
   integrations: [react(), sitemap()],
   output: "static",
-  i18n: {
-    defaultLocale: "it",
-    locales: ["it", "en"],
-    routing: { prefixDefaultLocale: true },
-  },
 });
