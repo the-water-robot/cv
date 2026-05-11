@@ -8,7 +8,7 @@ const cv = await getEntry("cv", "cv.en");
 if (!cv) throw new Error("cv.en.yaml not found");
 const data = cv.data;
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const pdfUrl = `${base}cv_en.pdf`;
 
 const labels = {

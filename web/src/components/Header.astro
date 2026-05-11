@@ -4,8 +4,7 @@ interface Props {
   name: string;
 }
 const { lang, name } = Astro.props;
-const base = import.meta.env.BASE_URL;
-// IT is at root, EN is at /en/
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const itHref = base;
 const enHref = `${base}en/`;
 ---
