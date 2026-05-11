@@ -1,4 +1,4 @@
-import { useState } from "react";
+// FilterBar is stateless — emphasis state lives in the parent (CVPage/ExperienceTimeline)
 
 export type Emphasis = "hybrid" | "leadership" | "engineering";
 
