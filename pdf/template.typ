@@ -1,6 +1,5 @@
 // ─── CV Template ─────────────────────────────────────────────────────────────
-// Variables injected by build.py via Jinja2 before this file is compiled.
-// All {{ ... }} blocks are replaced at render time.
+// Jinja2 template — rendered by pdf/build.py before typst compilation.
 
 #set document(
   title: "{{ person.name }} — CV",
