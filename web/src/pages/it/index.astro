@@ -1,0 +1,50 @@
+---
+import { getEntry } from "astro:content";
+import { CVPage } from "../../components/CVPage";
+import Header from "../../components/Header.astro";
+import "../../styles/global.css";
+
+const cv = await getEntry("cv", "cv.it");
+if (!cv) throw new Error("cv.it.yaml not found");
+const data = cv.data;
+
+const base = import.meta.env.BASE_URL;
+const pdfUrl = `${base}cv_it.pdf`;
+
+const labels = {
+  filterLabels: { hybrid: "Entrambi", leadership: "Leadership", engineering: "Engineering" },
+  sectionExperience: "Esperienza",
+  sectionSkills: "Competenze",
+  sectionDomains: "Domini",
+  sectionEducation: "Formazione",
+  sectionProjects: "Progetti",
+  sectionLanguages: "Lingue",
+  downloadPdf: "Scarica PDF",
+  printFriendly: "Stampa",
+};
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{data.person.name} — CV</title>
+    <meta name="description" content={`CV di ${data.person.name} — ${data.person.title}`} />
+    <meta property="og:title" content={`${data.person.name} — CV`} />
+    <meta property="og:description" content={`CV di ${data.person.name} — ${data.person.title}`} />
+    <meta property="og:type" content="profile" />
+    <link rel="alternate" hreflang="it" href={`${base}it/`} />
+    <link rel="alternate" hreflang="en" href={`${base}en/`} />
+    <link rel="canonical" href={`${base}it/`} />
+  </head>
+  <body>
+    <Header lang="it" name={data.person.name} />
+    <main>
+      <CVPage client:load data={data} pdfUrl={pdfUrl} labels={labels} />
+    </main>
+    <footer style="text-align:center;padding:2rem;font-size:0.8rem;color:var(--color-text-muted);border-top:1px solid var(--color-border);margin-top:2rem">
+      Aggiornato {data.meta.updated} · <a href={`${base}en/`}>English version</a>
+    </footer>
+  </body>
+</html>
