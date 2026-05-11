@@ -1,0 +1,141 @@
+meta:
+  language: it
+  emphasis: hybrid          # leadership | engineering | hybrid
+  updated: "2026-05-11"
+
+person:
+  name: Pietro Ilacqua
+  title: Cobot Innovation and Technology Leader
+  location: Milano, Italia
+  email: "<da_compilare>"
+  links:
+    linkedin: "<da_compilare>"
+    github: "<da_compilare>"
+    website: "<da_compilare>"
+
+summary: |
+  Ingegnere robotico con oltre 9 anni in ABB, specializzato in robot
+  collaborativi, automazione industriale e innovazione tecnologica.
+  Guido la strategia tecnica e lo sviluppo di soluzioni cobot,
+  unendo leadership tecnologica e contributo diretto come sviluppatore
+  (RAPID, EGM, RWS, VS Code extensions pubblicate).
+
+experience:
+  - period:
+      from: "2025-04"
+      to: null
+    role: Cobot Innovation and Technology Leader
+    company: ABB
+    location: Sesto San Giovanni
+    tags: [leadership, cobot, strategy, roadmap]
+    highlights:
+      leadership:
+        - "<da_compilare: strategia tecnica e roadmap cobot>"
+      engineering:
+        - "<da_compilare: contributi tecnici concreti>"
+
+  - period:
+      from: "2020-01"
+      to: "2025-05"
+    role: Cobot Specialist
+    company: ABB
+    location: Sesto San Giovanni
+    tags: [cobot, RAPID, EGM, RWS, python]
+    highlights:
+      leadership: []
+      engineering: []
+
+  - period:
+      from: "2018-02"
+      to: "2020-01"
+    role: Cobot Product Engineering Specialist
+    company: ABB
+    location: Sesto San Giovanni
+    tags: [cobot, product-engineering]
+    highlights:
+      leadership: []
+      engineering: []
+
+  - period:
+      from: "2016-04"
+      to: "2018-02"
+    role: Robotics Unit Technical Support Engineer
+    company: ABB
+    location: Sesto San Giovanni
+    tags: [robotics, support]
+    highlights:
+      leadership: []
+      engineering: []
+
+  - period:
+      from: "2016-01"
+      to: "2016-02"
+    role: Analyst
+    company: Deloitte
+    location: Milano
+    tags: [consulting]
+    highlights:
+      leadership: []
+      engineering: []
+
+  - period:
+      from: "2015-07"
+      to: "2015-12"
+    role: Technical Development Specialist Automation
+    company: Barilla Group
+    location: Parma
+    tags: [automation, industrial]
+    highlights:
+      leadership: []
+      engineering: []
+
+education:
+  - degree: Laurea Magistrale in Ingegneria dell'Automazione
+    institution: Politecnico di Milano
+    period:
+      from: 2012
+      to: 2015
+    grade: "100/110"
+
+  - degree: Laurea Triennale in Ingegneria dell'Automazione
+    institution: Politecnico di Milano
+    period:
+      from: 2009
+      to: 2012
+    grade: "92/110"
+
+  - degree: Programma Erasmus in Intelligenza Artificiale
+    institution: University of Southampton
+    period:
+      from: 2013
+      to: 2013
+
+skills:
+  domains:
+    - Robotica industriale e cobot
+    - Automazione e controllo
+    - Intelligenza artificiale applicata
+    - Product engineering
+  technologies:
+    abb:       [RAPID, RobotStudio, OmniCore, IRC5, EGM, RWS, Force Control]
+    languages: [Python, C/C++, TypeScript, Rust]
+    frameworks: [ROS, Tauri, Next.js, Astro]
+    tools:     [Git, GitHub Actions, Azure DevOps, VS Code Extension API]
+
+projects:
+  - name: ABB Robotics Ecosystem — VS Code Extensions
+    url: "<marketplace_url>"
+    role: Publisher / lead developer
+    description: Extension ufficiali pubblicate sul VS Marketplace per l'ecosistema ABB Robotics
+    tags: [typescript, vscode, abb]
+
+  - name: OmniCore Commander
+    url: "<github_url>"
+    description: Desktop utility (Tauri 2 / Rust) per discovery e controllo di controller OmniCore via RWS 2
+    tags: [rust, tauri, rws, omnicore]
+
+languages:
+  - name: Italiano
+    level: native
+  - name: English
+    level: C1
