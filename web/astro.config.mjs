@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://<da_compilare>.github.io",
+  site: "https://the-water-robot.github.io",
   base: "/cv",
   integrations: [react(), sitemap()],
   output: "static",
