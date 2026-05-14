@@ -10,7 +10,7 @@ person:
   email: "<da_compilare>"
   links:
     linkedin: "<da_compilare>"
-    github: the-water-robot
+    github: "<da_compilare>"
     website: "<da_compilare>"
 
 summary: |
@@ -130,11 +130,11 @@ skills:
     - AI adoption and coding agents in development workflows
     - Product engineering and innovation strategy
   technologies:
-    abb:        [RAPID, RobotStudio, OmniCore, IRC5, EGM, RWS 2, Force Control, SafeMove]
-    languages:  [Python, C/C++, TypeScript, Rust, RAPID]
-    frameworks: [ROS, Tauri, Next.js, Astro, React]
-    ai_tools:   [Claude Code, GitHub Copilot, MCP, Claude SDK, prompt engineering, tool use]
-    devops:     [Git, GitHub Actions, Azure DevOps, VS Code Extension API]
+    abb:        [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control]
+    languages:  [Python, TypeScript, Rust]
+    frameworks: [Astro, React, Tauri]
+    ai_tools:   [Claude Code, GitHub Copilot, MCP, Claude SDK]
+    tools:      [Git, GitHub Actions, VS Code Extension API]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -163,14 +163,6 @@ projects:
       RAPID syntax, snippets, RobotStudio integration, and cobot developer tooling.
     tags: [typescript, vscode, RAPID, developer-tools]
 
-  - name: OmniCore Commander
-    url: https://github.com/the-water-robot
-    role: Author
-    description: |
-      Desktop utility (Tauri 2 + Rust) for automatic discovery and control of OmniCore
-      controllers via RWS 2. Personal open-source tool.
-    tags: [rust, tauri, RWS, OmniCore]
-
 languages:
   - name: Italian
     level: native
@@ -185,3 +177,9 @@ beyond_work:
       Gli Animali Fantastici del Sudamerica — Italian indie band.
       Songwriting, lead vocals, and live performance.
     url: "<da_compilare_band_url>"
+
+  - title: GitHub — the-water-robot
+    description: |
+      Personal projects and open-source tools around robotics, cobots,
+      and development: desktop utilities, RWS experiments, automations.
+    url: https://github.com/the-water-robot

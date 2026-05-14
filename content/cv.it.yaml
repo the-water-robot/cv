@@ -10,7 +10,7 @@ person:
   email: "<da_compilare>"
   links:
     linkedin: "<da_compilare>"
-    github: the-water-robot
+    github: "<da_compilare>"
     website: "<da_compilare>"
 
 summary: |
@@ -130,11 +130,11 @@ skills:
     - AI adoption e coding agents in flussi di sviluppo
     - Product engineering e innovation strategy
   technologies:
-    abb:        [RAPID, RobotStudio, OmniCore, IRC5, EGM, RWS 2, Force Control, SafeMove]
-    languages:  [Python, C/C++, TypeScript, Rust, RAPID]
-    frameworks: [ROS, Tauri, Next.js, Astro, React]
-    ai_tools:   [Claude Code, GitHub Copilot, MCP, Claude SDK, prompt engineering, tool use]
-    devops:     [Git, GitHub Actions, Azure DevOps, VS Code Extension API]
+    abb:        [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control]
+    languages:  [Python, TypeScript, Rust]
+    frameworks: [Astro, React, Tauri]
+    ai_tools:   [Claude Code, GitHub Copilot, MCP, Claude SDK]
+    tools:      [Git, GitHub Actions, VS Code Extension API]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -163,14 +163,6 @@ projects:
       sintassi RAPID, snippet, integrazione con RobotStudio e tool di sviluppo per cobot.
     tags: [typescript, vscode, RAPID, developer-tools]
 
-  - name: OmniCore Commander
-    url: https://github.com/the-water-robot
-    role: Author
-    description: |
-      Desktop utility (Tauri 2 + Rust) per discovery automatica e controllo
-      di controller OmniCore via RWS 2. Tool personale open-source.
-    tags: [rust, tauri, RWS, OmniCore]
-
 languages:
   - name: Italiano
     level: madrelingua
@@ -185,3 +177,9 @@ beyond_work:
       Gli Animali Fantastici del Sudamerica — band indie italiana.
       Songwriting, voce e performance dal vivo.
     url: "<da_compilare_band_url>"
+
+  - title: GitHub — the-water-robot
+    description: |
+      Progetti personali e tool open-source su robotica, cobot e sviluppo:
+      utility desktop, esperimenti con RWS, automazioni.
+    url: https://github.com/the-water-robot
