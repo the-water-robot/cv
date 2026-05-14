@@ -7,18 +7,19 @@ person:
   name: Pietro Ilacqua
   title: Robotics Software Engineer & Innovation Technology Leader
   location: Milan, Italy
-  email: "<da_compilare>"
+  email: "maildipietroilacqua@gmail.com"
   links:
-    linkedin: "<da_compilare>"
+    linkedin: "pietro-ilacqua-b2846a59"
     github: "<da_compilare>"
     website: "<da_compilare>"
 
 summary: |
-  Robotics engineer with 9+ years at ABB, now leading technology innovation
-  for collaborative robots. I shape the technical roadmap while contributing
-  directly to the code — from RAPID/EGM/RWS to VS Code extensions published
-  on the Marketplace. I treat coding agents (Claude Code, Copilot) as a
-  productivity multiplier across prototypes, tooling, and internal automations.
+  Robotics engineer with 10+ years at ABB, specializing in collaborative robots
+  and software tooling. I lead technology innovation — shaping roadmaps,
+  prototyping cobot solutions, and shipping production code in RAPID, TypeScript,
+  and Rust, including VS Code extensions on the Marketplace. I embed AI coding
+  agents (Claude Code, Copilot) at every stage of development as a genuine
+  force multiplier.
 
 experience:
   - period:
@@ -130,8 +131,8 @@ skills:
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    abb:      [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control]
-    ai_tools: [Claude Code, GitHub Copilot, MCP, Claude SDK]
+    robotics: [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control, ROS]
+    ai_tools: [Claude Code, GitHub Copilot, MCP]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -147,7 +148,7 @@ projects:
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions
-    url: "<da_compilare_marketplace_url>"
+    url: "https://marketplace.visualstudio.com/publishers/abb-robotics-ecosystem"
     role: Publisher / lead developer
     description: Official Marketplace extensions for ABB Robotics — RAPID syntax, snippets, RobotStudio integration.
     tags: [typescript, vscode, RAPID, developer-tools]

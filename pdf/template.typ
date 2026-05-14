@@ -63,7 +63,7 @@
   align(right + horizon)[
     #text(size: 8pt, fill: muted)[
       {{ person.location }} \
-      {{ person.email }} \
+      #link("mailto:{{ person.email }}")[{{ person.email | replace("@", "\\@") }}] \
       #link("https://linkedin.com/in/{{ person.links.linkedin }}")[LinkedIn] ·
       #link("https://github.com/{{ person.links.github }}")[GitHub]
       {% if person.links.website and person.links.website != "<da_compilare>" %}

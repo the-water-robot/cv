@@ -7,18 +7,19 @@ person:
   name: Pietro Ilacqua
   title: Robotics Software Engineer & Innovation Technology Leader
   location: Milano, Italia
-  email: "<da_compilare>"
+  email: "maildipietroilacqua@gmail.com"
   links:
-    linkedin: "<da_compilare>"
+    linkedin: "pietro-ilacqua-b2846a59"
     github: "<da_compilare>"
     website: "<da_compilare>"
 
 summary: |
-  Ingegnere robotico con oltre 9 anni in ABB, oggi alla guida dell'innovazione
-  tecnologica per i robot collaborativi. Definisco la roadmap tecnica e contribuisco
-  in prima persona allo sviluppo: dal codice RAPID/EGM/RWS fino a estensioni
-  VS Code pubblicate sul Marketplace. Adotto coding agents (Claude Code, Copilot)
-  come moltiplicatore di produttività su prototipi, tooling e automazioni interne.
+  Ingegnere robotico con oltre 10 anni in ABB, specializzato in robot collaborativi
+  e software tooling. Guido l'innovazione tecnologica — definendo la roadmap,
+  prototipando soluzioni cobot e contribuendo direttamente al codice in RAPID,
+  TypeScript e Rust, incluse estensioni VS Code pubblicate sul Marketplace. Integro
+  coding agents (Claude Code, Copilot) in ogni fase dello sviluppo come vero
+  moltiplicatore di produttività.
 
 experience:
   - period:
@@ -130,8 +131,8 @@ skills:
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    abb:      [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control]
-    ai_tools: [Claude Code, GitHub Copilot, MCP, Claude SDK]
+    robotics: [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control, ROS]
+    ai_tools: [Claude Code, GitHub Copilot, MCP]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -147,7 +148,7 @@ projects:
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions
-    url: "<da_compilare_marketplace_url>"
+    url: "https://marketplace.visualstudio.com/publishers/abb-robotics-ecosystem"
     role: Publisher / lead developer
     description: Estensioni ufficiali sul Marketplace per ABB Robotics — sintassi RAPID, snippet, integrazione RobotStudio.
     tags: [typescript, vscode, RAPID, developer-tools]
