@@ -8,12 +8,12 @@
 
 #set page(
   paper: "a4",
-  margin: (x: 1.4cm, y: 1.2cm),
+  margin: (x: 1.4cm, y: 1.1cm),
 )
 
 #set text(
   font: ("IBM Plex Sans", "Helvetica Neue", "Arial", "sans-serif"),
-  size: 9.5pt,
+  size: 9pt,
   lang: "{{ meta.language }}",
   fallback: true,
 )
@@ -32,23 +32,23 @@
 
 #let chip(body) = box(
   fill: tag-bg,
-  inset: (x: 5pt, y: 2pt),
+  inset: (x: 4pt, y: 2pt),
   radius: 3pt,
-  text(size: 7.5pt, fill: tag-fg, font: ("IBM Plex Mono", "Courier New", "monospace"), body),
+  text(size: 7pt, fill: tag-fg, font: ("IBM Plex Mono", "Courier New", "monospace"), body),
 )
 
 #let section-title(body) = {
-  v(5pt)
-  text(size: 7.5pt, weight: "bold", fill: accent, upper(body))
+  v(4pt)
+  text(size: 7pt, weight: "bold", fill: accent, upper(body))
   v(1pt)
   hrule()
-  v(3pt)
+  v(2pt)
 }
 
 #let period-label(p) = {
   let from = p.from
   let to   = if p.to == none { "present" } else { p.to }
-  text(size: 8pt, fill: muted, from + " – " + to)
+  text(size: 7.5pt, fill: muted, from + " – " + to)
 }
 
 // ─── HEADER ──────────────────────────────────────────────────────────────────
@@ -56,12 +56,12 @@
   columns: (1fr, auto),
   gutter: 8pt,
   [
-    #text(size: 20pt, weight: "bold", "{{ person.name }}")
+    #text(size: 18pt, weight: "bold", "{{ person.name }}")
     #linebreak()
-    #text(size: 11pt, fill: muted, "{{ person.title }}")
+    #text(size: 10pt, fill: muted, "{{ person.title }}")
   ],
   align(right + horizon)[
-    #text(size: 8pt, fill: muted)[
+    #text(size: 7.5pt, fill: muted)[
       {{ person.location }} \
       #link("mailto:{{ person.email }}")[{{ person.email | replace("@", "\\@") }}] \
       #link("https://linkedin.com/in/{{ person.links.linkedin }}")[LinkedIn] ·
@@ -73,18 +73,18 @@
   ],
 )
 
-#v(6pt)
+#v(4pt)
 #hrule()
 
 // ─── SUMMARY ─────────────────────────────────────────────────────────────────
-#v(4pt)
-#text(size: 9pt, "{{ summary | trim }}")
-#v(8pt)
+#v(3pt)
+#text(size: 8.5pt, "{{ summary | trim }}")
+#v(5pt)
 
 // ─── TWO-COLUMN BODY (65% / 35%) ─────────────────────────────────────────────
 #grid(
-  columns: (1fr, 0.52fr),
-  gutter: 16pt,
+  columns: (1fr, 0.5fr),
+  gutter: 14pt,
 
   // ── LEFT: Experience ───────────────────────────────────────────────────────
   [
@@ -96,7 +96,7 @@
       [
         #text(weight: "semibold", "{{ job.role }}")
         #linebreak()
-        #text(size: 8.5pt, fill: muted, "{{ job.company }}, {{ job.location }}")
+        #text(size: 8pt, fill: muted, "{{ job.company }}, {{ job.location }}")
       ],
       align(right)[#period-label((from: "{{ job.period.from }}", to: {{ "none" if job.period.to is none else '"' + job.period.to + '"' }}))]
     )
@@ -110,14 +110,14 @@
     {% endif %}
     {% if bullets %}
     #list(
-      indent: 6pt,
+      indent: 5pt,
       body-indent: 4pt,
       {% for b in bullets %}{% if b %}
       [{{ b }}],
       {% endif %}{% endfor %}
     )
     {% endif %}
-    #v(4pt)
+    #v(3pt)
     {% endfor %}
   ],
 
@@ -127,28 +127,23 @@
     #section-title("Skills")
 
     {% for d in skills.domains %}#chip("{{ d }}") {% endfor %}
-    #v(5pt)
+    #v(4pt)
 
     {% for group, items in skills.technologies.items() %}
-    #text(size: 7.5pt, weight: "semibold", upper("{{ group }}"))
+    #text(size: 7pt, weight: "semibold", upper("{{ group }}"))
     #linebreak()
     {% for item in items %}#chip("{{ item }}") {% endfor %}
-    #v(4pt)
+    #v(3pt)
     {% endfor %}
 
     // Education ──────────────────────────────────────────────────────────────
     #section-title("Education")
 
     {% for edu in education %}
-    #text(size: 8pt, weight: "semibold", "{{ edu.degree }}")
+    #text(size: 7.5pt, weight: "semibold", "{{ edu.degree }}")
     #linebreak()
-    #text(size: 7.5pt, fill: muted, "{{ edu.institution }}")
-    #h(1fr)
-    #text(size: 7.5pt, fill: muted, "{{ edu.period.from }}–{{ edu.period.to }}")
-    {% if edu.grade is defined %}
-    #h(4pt) #text(size: 7.5pt, fill: muted, "{{ edu.grade }}")
-    {% endif %}
-    #v(4pt)
+    #text(size: 7pt, fill: muted)[{{ edu.institution }} #h(1fr) {{ edu.period.from }}–{{ edu.period.to }}{% if edu.grade is defined %} · {{ edu.grade }}{% endif %}]
+    #v(3pt)
     {% endfor %}
 
     // Projects ───────────────────────────────────────────────────────────────
@@ -156,24 +151,20 @@
 
     {% for proj in projects %}
     {% if proj.url is defined and proj.url and not proj.url.startswith("<") %}
-    #link("{{ proj.url }}")[#text(size: 8pt, weight: "semibold", "{{ proj.name }}")]
+    #link("{{ proj.url }}")[#text(size: 7.5pt, weight: "semibold", "{{ proj.name }}")]
     {% else %}
-    #text(size: 8pt, weight: "semibold", "{{ proj.name }}")
+    #text(size: 7.5pt, weight: "semibold", "{{ proj.name }}")
     {% endif %}
     #linebreak()
-    #text(size: 7.5pt, fill: muted, "{{ proj.role }}")
-    #linebreak()
-    #text(size: 7.5pt, "{{ proj.description | trim }}")
-    #v(4pt)
+    #text(size: 7pt, "{{ proj.description | trim }}")
+    #v(3pt)
     {% endfor %}
 
     // Languages ──────────────────────────────────────────────────────────────
     #section-title("Languages")
 
-    {% for lang in languages %}
-    #text(size: 8pt, "{{ lang.name }}") #h(4pt) #text(size: 7.5pt, fill: muted, "{{ lang.level }}")
-    #linebreak()
-    {% endfor %}
+    #text(size: 7.5pt)[{% for lang in languages %}{{ lang.name }} #text(fill: muted)[{{ lang.level }}]{% if not loop.last %} · {% endif %}{% endfor %}]
+    #v(2pt)
 
     // Beyond work ─────────────────────────────────────────────────────────────
     {% if beyond_work is defined and beyond_work %}
@@ -181,13 +172,11 @@
 
     {% for item in beyond_work %}
     {% if item.url is defined and item.url and not item.url.startswith("<") %}
-    #link("{{ item.url }}")[#text(size: 8pt, weight: "semibold", "{{ item.title }}")]
+    #link("{{ item.url }}")[#text(size: 7.5pt, weight: "semibold", "{{ item.title }}")]
     {% else %}
-    #text(size: 8pt, weight: "semibold", "{{ item.title }}")
+    #text(size: 7.5pt, weight: "semibold", "{{ item.title }}")
     {% endif %}
     #linebreak()
-    #text(size: 7.5pt, fill: muted, "{{ item.description | trim | replace('\n', ' ') }}")
-    #v(3pt)
     {% endfor %}
     {% endif %}
   ],
