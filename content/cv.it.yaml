@@ -130,11 +130,8 @@ skills:
     - AI adoption e coding agents in flussi di sviluppo
     - Product engineering e innovation strategy
   technologies:
-    abb:        [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control]
-    languages:  [Python, TypeScript, Rust]
-    frameworks: [Astro, React, Tauri]
-    ai_tools:   [Claude Code, GitHub Copilot, MCP, Claude SDK]
-    tools:      [Git, GitHub Actions, VS Code Extension API]
+    abb:      [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control]
+    ai_tools: [Claude Code, GitHub Copilot, MCP, Claude SDK]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -168,9 +165,6 @@ languages:
     level: madrelingua
   - name: English
     level: C1
-  - name: Spagnolo
-    level: A2
-
 beyond_work:
   - title: Founder & frontman
     description: |
