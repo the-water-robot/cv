@@ -80,21 +80,32 @@ def compile_pdf(typ_source: str, output_path: Path) -> None:
     typ_path = DIST_DIR / output_path.with_suffix(".typ").name
     typ_path.write_text(typ_source, encoding="utf-8")
 
-    typst_bin = shutil.which("typst")
-    if not typst_bin:
-        print("ERROR: typst not found in PATH. Install via https://typst.app/", file=sys.stderr)
-        sys.exit(1)
-
     font_dir = PDF_DIR / "assets" / "fonts"
-    cmd = [typst_bin, "compile"]
-    if font_dir.exists():
-        cmd += ["--font-path", str(font_dir)]
-    cmd += [str(typ_path), str(output_path)]
+    font_paths = [str(font_dir)] if font_dir.exists() else []
 
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    if result.returncode != 0:
-        print(result.stderr, file=sys.stderr)
-        sys.exit(result.returncode)
+    typst_bin = shutil.which("typst")
+    if typst_bin:
+        cmd = [typst_bin, "compile"]
+        for fp in font_paths:
+            cmd += ["--font-path", fp]
+        cmd += [str(typ_path), str(output_path)]
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            print(result.stderr, file=sys.stderr)
+            sys.exit(result.returncode)
+    else:
+        try:
+            import typst as typst_py
+        except ImportError:
+            print(
+                "ERROR: typst CLI not found and 'typst' Python package not installed.\n"
+                "Install one of:\n"
+                "  - typst CLI: https://github.com/typst/typst/releases\n"
+                "  - pip install typst",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        typst_py.compile(str(typ_path), output=str(output_path), font_paths=font_paths)
     print(f"  ✓  {output_path.relative_to(ROOT)}")
 
 
@@ -108,6 +119,9 @@ def build_one(lang: str, emphasis: str) -> None:
         canonical = DIST_DIR / f"cv_{lang}.pdf"
         shutil.copy2(out, canonical)
         print(f"  →  {canonical.relative_to(ROOT)} (canonical)")
+        web_public = ROOT / "web" / "public" / f"cv_{lang}.pdf"
+        shutil.copy2(out, web_public)
+        print(f"  →  {web_public.relative_to(ROOT)} (web/public)")
 
 
 def main() -> None:

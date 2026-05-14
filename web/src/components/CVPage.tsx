@@ -55,7 +55,6 @@ interface Labels {
   sectionLanguages: string;
   sectionBeyond: string;
   downloadPdf: string;
-  printFriendly: string;
 }
 
 interface Props {
@@ -103,7 +102,7 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
             </a>
           )}
         </div>
-        <PrintButton pdfUrl={pdfUrl} label={labels.downloadPdf} printLabel={labels.printFriendly} />
+        <PrintButton pdfUrl={pdfUrl} label={labels.downloadPdf} />
       </section>
 
       {/* Summary */}

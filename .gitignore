@@ -13,6 +13,7 @@ web/.cache/
 
 # Build artifacts
 *.pdf
+!web/public/*.pdf
 dist/
 
 # Editor
