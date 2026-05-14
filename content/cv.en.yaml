@@ -1,78 +1,89 @@
 meta:
   language: en
-  emphasis: hybrid          # leadership | engineering | hybrid
-  updated: "2026-05-11"
+  emphasis: hybrid
+  updated: "2026-05-14"
 
 person:
   name: Pietro Ilacqua
-  title: Cobot Innovation and Technology Leader
+  title: Cobot Innovation & Technology Leader
   location: Milan, Italy
   email: "<da_compilare>"
   links:
     linkedin: "<da_compilare>"
-    github: "<da_compilare>"
+    github: the-water-robot
     website: "<da_compilare>"
 
 summary: |
-  Robotics engineer with over 9 years at ABB, specializing in collaborative
-  robots, industrial automation, and technology innovation.
-  I lead technical strategy and cobot solution development, combining
-  technology leadership with hands-on engineering contributions
-  (RAPID, EGM, RWS, published VS Code extensions).
+  Robotics engineer with 9+ years at ABB, now leading technology innovation
+  for collaborative robots. I shape the technical roadmap while contributing
+  directly to the code — from RAPID/EGM/RWS to VS Code extensions published
+  on the Marketplace. I treat coding agents (Claude Code, Copilot) as a
+  productivity multiplier across prototypes, tooling, and internal automations.
 
 experience:
   - period:
       from: "2025-04"
       to: null
-    role: Cobot Innovation and Technology Leader
-    company: ABB
-    location: Sesto San Giovanni
-    tags: [leadership, cobot, strategy, roadmap]
+    role: Cobot Innovation & Technology Leader
+    company: ABB Robotics
+    location: Sesto San Giovanni, Italy
+    tags: [leadership, cobot, strategy, roadmap, innovation]
     highlights:
       leadership:
-        - "<da_compilare: technical strategy and cobot roadmap>"
+        - Drive technical strategy and product roadmap for the global cobot portfolio
+        - Shape adoption decisions for AI/coding agents across the team's development workflow
       engineering:
-        - "<da_compilare: concrete technical contributions>"
+        - Rapid prototyping of cobot solutions integrating RAPID, RWS 2, and external APIs
+        - Direct production-code contributions (RAPID, TypeScript, Rust)
 
   - period:
       from: "2020-01"
       to: "2025-05"
     role: Cobot Specialist
-    company: ABB
-    location: Sesto San Giovanni
-    tags: [cobot, RAPID, EGM, RWS, python]
+    company: ABB Robotics
+    location: Sesto San Giovanni, Italy
+    tags: [cobot, RAPID, EGM, RWS, python, omnivance, easyrecord]
     highlights:
-      leadership: []
-      engineering: []
+      leadership:
+        - Global technical reference for ABB's cobot portfolio (GoFa, YuMi, SWIFTI)
+        - Technologist supporting pre-sales, customer training, and international trade shows
+      engineering:
+        - "Developed EasyRecord: lead-through programming software for intuitive cobot trajectory recording — the technology behind landmark demos like YuMi conducting Andrea Bocelli"
+        - "Contributed to the OmniVance™ Collaborative Surface Finishing Cell: plug-and-play GoFa cell for sanding/polishing, cutting programming time by up to 90%"
+        - Force control and EGM (Externally Guided Motion) integration for collaborative finishing applications
 
   - period:
       from: "2018-02"
       to: "2020-01"
     role: Cobot Product Engineering Specialist
-    company: ABB
-    location: Sesto San Giovanni
-    tags: [cobot, product-engineering]
+    company: ABB Robotics
+    location: Sesto San Giovanni, Italy
+    tags: [cobot, product-engineering, YuMi]
     highlights:
       leadership: []
-      engineering: []
+      engineering:
+        - Product development and functional validation on the YuMi cobot line and successors
+        - Test plan definition and international rollout support for new firmware releases
 
   - period:
       from: "2016-04"
       to: "2018-02"
     role: Robotics Unit Technical Support Engineer
-    company: ABB
-    location: Sesto San Giovanni
-    tags: [robotics, support]
+    company: ABB Robotics
+    location: Sesto San Giovanni, Italy
+    tags: [robotics, support, IRC5]
     highlights:
       leadership: []
-      engineering: []
+      engineering:
+        - Second-level technical support on IRC5 controllers and the industrial robot portfolio
+        - Critical production issue resolution at automotive and general industry customers
 
   - period:
       from: "2016-01"
       to: "2016-02"
     role: Analyst
-    company: Deloitte
-    location: Milan
+    company: Deloitte Consulting
+    location: Milan, Italy
     tags: [consulting]
     highlights:
       leadership: []
@@ -81,13 +92,14 @@ experience:
   - period:
       from: "2015-07"
       to: "2015-12"
-    role: Technical Development Specialist Automation
+    role: Technical Development Specialist — Automation
     company: Barilla Group
-    location: Parma
-    tags: [automation, industrial]
+    location: Parma, Italy
+    tags: [automation, industrial, PLC]
     highlights:
       leadership: []
-      engineering: []
+      engineering:
+        - Industrial automation solutions in support of production lines
 
 education:
   - degree: Master's Degree in Automation Engineering
@@ -104,40 +116,72 @@ education:
       to: 2012
     grade: "92/110"
 
-  - degree: Erasmus Program in Artificial Intelligence
-    institution: University of Southampton
+  - degree: Erasmus Programme — Artificial Intelligence
+    institution: University of Southampton (UK)
     period:
       from: 2013
       to: 2013
 
 skills:
   domains:
-    - Industrial robotics and cobots
-    - Automation and control
-    - Applied artificial intelligence
-    - Coding agents and LLM systems
-    - Product engineering
+    - Collaborative robotics and cobots
+    - Industrial automation and force control
+    - Lead-through programming and teach-by-demonstration
+    - AI adoption and coding agents in development workflows
+    - Product engineering and innovation strategy
   technologies:
-    abb:       [RAPID, RobotStudio, OmniCore, IRC5, EGM, RWS, Force Control]
-    languages: [Python, C/C++, TypeScript, Rust]
-    frameworks: [ROS, Tauri, Next.js, Astro]
-    ai_agents: [Claude SDK, MCP, LangChain, LangGraph, tool use, prompt engineering]
-    tools:     [Git, GitHub Actions, Azure DevOps, VS Code Extension API]
+    abb:        [RAPID, RobotStudio, OmniCore, IRC5, EGM, RWS 2, Force Control, SafeMove]
+    languages:  [Python, C/C++, TypeScript, Rust, RAPID]
+    frameworks: [ROS, Tauri, Next.js, Astro, React]
+    ai_tools:   [Claude Code, GitHub Copilot, MCP, Claude SDK, prompt engineering, tool use]
+    devops:     [Git, GitHub Actions, Azure DevOps, VS Code Extension API]
 
 projects:
-  - name: ABB Robotics Ecosystem — VS Code Extensions
-    url: "<marketplace_url>"
+  - name: OmniVance™ Collaborative Surface Finishing Cell
+    url: https://www.abb.com/global/en/areas/robotics/solutions/application-cells/omnivance-collaborative-surface-finishing-cell
+    role: Cobot specialist contributor
+    description: |
+      ABB's plug-and-play cell for automated sanding and polishing, built around the GoFa
+      cobot with integrated force control. Reduces programming time by up to 90%, enabling
+      SMEs and general industry to adopt robotic finishing.
+    tags: [cobot, GoFa, force-control, finishing]
+
+  - name: EasyRecord
+    url: "<da_compilare_url>"
+    role: Developer
+    description: |
+      Lead-through programming software for intuitive cobot trajectory recording via
+      manual guidance. The foundation of the historic international demo where ABB's
+      YuMi conducted Andrea Bocelli with the Lucca Symphony Orchestra (2017).
+    tags: [cobot, lead-through, YuMi, teach-by-demo]
+
+  - name: ABB Robotics — VS Code Extensions
+    url: "<da_compilare_marketplace_url>"
     role: Publisher / lead developer
-    description: Official extensions published on the VS Marketplace for the ABB Robotics ecosystem
-    tags: [typescript, vscode, abb]
+    description: |
+      Official Visual Studio Marketplace extensions for the ABB Robotics ecosystem:
+      RAPID syntax, snippets, RobotStudio integration, and cobot developer tooling.
+    tags: [typescript, vscode, RAPID, developer-tools]
 
   - name: OmniCore Commander
-    url: "<github_url>"
-    description: Desktop utility (Tauri 2 / Rust) for discovery and control of OmniCore controllers via RWS 2
-    tags: [rust, tauri, rws, omnicore]
+    url: https://github.com/the-water-robot
+    role: Author
+    description: |
+      Desktop utility (Tauri 2 + Rust) for automatic discovery and control of OmniCore
+      controllers via RWS 2. Personal open-source tool.
+    tags: [rust, tauri, RWS, OmniCore]
 
 languages:
   - name: Italian
     level: native
   - name: English
     level: C1
+  - name: Spanish
+    level: A2
+
+beyond_work:
+  - title: Founder & frontman
+    description: |
+      Gli Animali Fantastici del Sudamerica — Italian indie band.
+      Songwriting, lead vocals, and live performance.
+    url: "<da_compilare_band_url>"

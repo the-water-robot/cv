@@ -8,7 +8,7 @@ export function PrintButton({ pdfUrl, label, printLabel }: Props) {
   return (
     <div
       className="print-btn"
-      style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "0.75rem" }}
+      style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "1.25rem" }}
     >
       <a
         href={pdfUrl}
@@ -16,15 +16,18 @@ export function PrintButton({ pdfUrl, label, printLabel }: Props) {
         style={{
           display: "inline-flex",
           alignItems: "center",
-          gap: "0.3rem",
-          padding: "0.3rem 0.85rem",
+          gap: "0.4rem",
+          padding: "0.45rem 1rem",
           border: "1px solid var(--accent)",
-          background: "var(--accent-dim)",
-          color: "var(--accent)",
-          fontSize: "0.72rem",
+          background: "var(--accent)",
+          color: "var(--bg)",
+          fontSize: "0.75rem",
           fontFamily: "var(--font-mono)",
-          letterSpacing: "0.05em",
+          fontWeight: 500,
+          letterSpacing: "0.04em",
           textDecoration: "none",
+          borderRadius: "2px",
+          transition: "opacity 0.15s",
         }}
       >
         ↓ {label}
@@ -34,15 +37,17 @@ export function PrintButton({ pdfUrl, label, printLabel }: Props) {
         style={{
           display: "inline-flex",
           alignItems: "center",
-          gap: "0.3rem",
-          padding: "0.3rem 0.85rem",
+          gap: "0.4rem",
+          padding: "0.45rem 1rem",
           border: "1px solid var(--border)",
           background: "transparent",
           color: "var(--text-dim)",
-          fontSize: "0.72rem",
+          fontSize: "0.75rem",
           fontFamily: "var(--font-mono)",
-          letterSpacing: "0.05em",
+          fontWeight: 500,
+          letterSpacing: "0.04em",
           cursor: "pointer",
+          borderRadius: "2px",
         }}
       >
         ⎙ {printLabel}

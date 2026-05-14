@@ -72,6 +72,7 @@ export function ExperienceTimeline({
             <div
               key={`${job.company}-${job.period.from}`}
               className="exp-item"
+              data-num={String(i + 1).padStart(2, "0")}
               role="button"
               tabIndex={0}
               aria-expanded={isOpen}

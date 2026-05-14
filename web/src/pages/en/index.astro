@@ -19,6 +19,7 @@ const labels = {
   sectionEducation: "Education",
   sectionProjects: "Projects",
   sectionLanguages: "Languages",
+  sectionBeyond: "Beyond Work",
   downloadPdf: "Download PDF",
   printFriendly: "Print",
 };
@@ -43,8 +44,11 @@ const labels = {
     <main>
       <CVPage client:load data={data} pdfUrl={pdfUrl} labels={labels} />
     </main>
-    <footer style="text-align:center;padding:2rem;font-size:0.8rem;color:var(--color-text-muted);border-top:1px solid var(--color-border);margin-top:2rem">
-      Updated {data.meta.updated} · <a href={`${base}it/`}>Versione italiana</a>
+    <footer>
+      <div class="container footer-inner">
+        <span>Updated {data.meta.updated}</span>
+        <a href={base}>← Versione italiana</a>
+      </div>
     </footer>
   </body>
 </html>

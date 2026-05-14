@@ -67,6 +67,14 @@ const cvCollection = defineCollection({
         level: z.string(),
       }),
     ),
+    beyond_work: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        url: z.string().optional(),
+        period: z.string().optional(),
+      }),
+    ).default([]),
   }),
 });
 
