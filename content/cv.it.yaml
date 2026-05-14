@@ -124,11 +124,11 @@ education:
 
 skills:
   domains:
-    - Robotica collaborativa e cobot
-    - Automazione industriale e force control
-    - Lead-through programming e teach-by-demonstration
-    - AI adoption e coding agents in flussi di sviluppo
-    - Product engineering e innovation strategy
+    - Robotica collaborativa
+    - Force control & finishing
+    - Lead-through / teach-by-demo
+    - AI adoption & coding agents
+    - Innovation strategy
   technologies:
     abb:      [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control]
     ai_tools: [Claude Code, GitHub Copilot, MCP, Claude SDK]
@@ -137,27 +137,19 @@ projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
     url: https://www.abb.com/global/en/areas/robotics/solutions/application-cells/omnivance-collaborative-surface-finishing-cell
     role: Cobot specialist contributor
-    description: |
-      Cella plug-and-play ABB per sanding e polishing automatizzati basata su cobot GoFa
-      con force control integrato. Riduce il tempo di programmazione fino al 90% e abilita
-      SME e general industry ad adottare il finishing robotizzato.
+    description: Cella GoFa plug-and-play per sanding & polishing con force control integrato. Fino al 90% di tempo di programmazione in meno.
     tags: [cobot, GoFa, force-control, finishing]
 
   - name: EasyRecord
     url: "<da_compilare_url>"
     role: Developer
-    description: |
-      Software di lead-through programming per la registrazione intuitiva di traiettorie
-      cobot tramite guida manuale. Alla base della storica demo internazionale del cobot
-      YuMi nel ruolo di direttore d'orchestra con Andrea Bocelli (Lucca, 2017).
+    description: Lead-through programming per la registrazione intuitiva di traiettorie cobot. Base della storica demo YuMi/Bocelli (2017).
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions
     url: "<da_compilare_marketplace_url>"
     role: Publisher / lead developer
-    description: |
-      Estensioni ufficiali sul Visual Studio Marketplace per l'ecosistema ABB Robotics:
-      sintassi RAPID, snippet, integrazione con RobotStudio e tool di sviluppo per cobot.
+    description: Estensioni ufficiali sul Marketplace per ABB Robotics — sintassi RAPID, snippet, integrazione RobotStudio.
     tags: [typescript, vscode, RAPID, developer-tools]
 
 languages:

@@ -8,7 +8,7 @@
 
 #set page(
   paper: "a4",
-  margin: (x: 1.6cm, y: 1.4cm),
+  margin: (x: 1.4cm, y: 1.2cm),
 )
 
 #set text(
@@ -38,11 +38,11 @@
 )
 
 #let section-title(body) = {
-  v(6pt)
-  text(size: 8pt, weight: "bold", fill: accent, upper(body))
+  v(5pt)
+  text(size: 7.5pt, weight: "bold", fill: accent, upper(body))
   v(1pt)
   hrule()
-  v(4pt)
+  v(3pt)
 }
 
 #let period-label(p) = {
@@ -117,24 +117,20 @@
       {% endif %}{% endfor %}
     )
     {% endif %}
-    #v(5pt)
+    #v(4pt)
     {% endfor %}
   ],
 
-  // ── RIGHT: Skills · Education · Projects · Languages ──────────────────────
+  // ── RIGHT: Skills · Education · Projects · Languages · Beyond ─────────────
   [
     // Skills ─────────────────────────────────────────────────────────────────
     #section-title("Skills")
 
-    *Domains*
-    #v(2pt)
-    {% for d in skills.domains %}
-    #chip("{{ d }}")
-    {% endfor %}
-    #v(6pt)
+    {% for d in skills.domains %}#chip("{{ d }}") {% endfor %}
+    #v(5pt)
 
     {% for group, items in skills.technologies.items() %}
-    #text(size: 8pt, weight: "semibold", "{{ group | capitalize }}")
+    #text(size: 7.5pt, weight: "semibold", upper("{{ group }}"))
     #linebreak()
     {% for item in items %}#chip("{{ item }}") {% endfor %}
     #v(4pt)
@@ -144,16 +140,15 @@
     #section-title("Education")
 
     {% for edu in education %}
-    #text(size: 8.5pt, weight: "semibold", "{{ edu.degree }}")
+    #text(size: 8pt, weight: "semibold", "{{ edu.degree }}")
     #linebreak()
-    #text(size: 8pt, fill: muted, "{{ edu.institution }}")
+    #text(size: 7.5pt, fill: muted, "{{ edu.institution }}")
     #h(1fr)
-    #text(size: 8pt, fill: muted, "{{ edu.period.from }}–{{ edu.period.to }}")
+    #text(size: 7.5pt, fill: muted, "{{ edu.period.from }}–{{ edu.period.to }}")
     {% if edu.grade is defined %}
-    #linebreak()
-    #text(size: 8pt, fill: muted, "Grade: {{ edu.grade }}")
+    #h(4pt) #text(size: 7.5pt, fill: muted, "{{ edu.grade }}")
     {% endif %}
-    #v(5pt)
+    #v(4pt)
     {% endfor %}
 
     // Projects ───────────────────────────────────────────────────────────────
@@ -161,12 +156,14 @@
 
     {% for proj in projects %}
     {% if proj.url is defined and proj.url and not proj.url.startswith("<") %}
-    #link("{{ proj.url }}")[#text(size: 8.5pt, weight: "semibold", "{{ proj.name }}")]
+    #link("{{ proj.url }}")[#text(size: 8pt, weight: "semibold", "{{ proj.name }}")]
     {% else %}
-    #text(size: 8.5pt, weight: "semibold", "{{ proj.name }}")
+    #text(size: 8pt, weight: "semibold", "{{ proj.name }}")
     {% endif %}
     #linebreak()
-    #text(size: 8pt, "{{ proj.description }}")
+    #text(size: 7.5pt, fill: muted, "{{ proj.role }}")
+    #linebreak()
+    #text(size: 7.5pt, "{{ proj.description | trim }}")
     #v(4pt)
     {% endfor %}
 
@@ -174,8 +171,24 @@
     #section-title("Languages")
 
     {% for lang in languages %}
-    #text(size: 8.5pt, "{{ lang.name }}") #h(4pt) #text(size: 8pt, fill: muted, "{{ lang.level }}")
+    #text(size: 8pt, "{{ lang.name }}") #h(4pt) #text(size: 7.5pt, fill: muted, "{{ lang.level }}")
     #linebreak()
     {% endfor %}
+
+    // Beyond work ─────────────────────────────────────────────────────────────
+    {% if beyond_work is defined and beyond_work %}
+    #section-title("Beyond work")
+
+    {% for item in beyond_work %}
+    {% if item.url is defined and item.url and not item.url.startswith("<") %}
+    #link("{{ item.url }}")[#text(size: 8pt, weight: "semibold", "{{ item.title }}")]
+    {% else %}
+    #text(size: 8pt, weight: "semibold", "{{ item.title }}")
+    {% endif %}
+    #linebreak()
+    #text(size: 7.5pt, fill: muted, "{{ item.description | trim | replace('\n', ' ') }}")
+    #v(3pt)
+    {% endfor %}
+    {% endif %}
   ],
 )
