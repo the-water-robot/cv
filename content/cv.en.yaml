@@ -131,7 +131,7 @@ skills:
     - Innovation strategy
   technologies:
     robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
-    coding:   [TypeScript, Python, Swift, Rust]
+    coding:   [JavaScript, TypeScript, Python, C++, C#, Rust]
     ai_tools: [Claude Code, GitHub Copilot]
 
 projects:
