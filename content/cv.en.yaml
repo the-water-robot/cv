@@ -143,8 +143,8 @@ projects:
 
   - name: EasyRecord
     url: "<da_compilare_url>"
-    role: Developer
-    description: Lead-through programming for intuitive cobot trajectory recording. Foundation of the YuMi/Bocelli orchestra demo (2017).
+    role: Creator & lead developer
+    description: Conceived, designed, and built the lead-through programming software for intuitive cobot trajectory recording. Foundation of the YuMi/Bocelli orchestra demo (2017).
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions
