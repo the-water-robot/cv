@@ -159,14 +159,10 @@ languages:
   - name: English
     level: C1
 beyond_work:
-  - title: Founder & frontman
-    description: |
-      Gli Animali Fantastici del Sudamerica — band indie italiana.
-      Songwriting, voce e performance dal vivo.
+  - title: "Founder & frontman — Gli Animali Fantastici del Sudamerica"
+    description: Band indie italiana. Songwriting, voce e performance dal vivo.
     url: "<da_compilare_band_url>"
 
-  - title: GitHub — the-water-robot
-    description: |
-      Progetti personali e tool open-source su robotica, cobot e sviluppo:
-      utility desktop, esperimenti con RWS, automazioni.
+  - title: GitHub — indie mobile apps & open source
+    description: App mobile indie e progetti open-source personali.
     url: https://github.com/the-water-robot
