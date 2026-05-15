@@ -16,9 +16,9 @@ person:
 summary: |
   Robotics engineer with 10+ years at ABB, specializing in collaborative robots
   and software tooling. I lead technology innovation — shaping roadmaps,
-  prototyping cobot solutions, and shipping production code in RAPID, TypeScript,
-  and Rust, including VS Code extensions on the Marketplace. I embed AI coding
-  agents (Claude Code, Copilot) at every stage of development as a genuine
+  prototyping cobot solutions, and shipping production code in RAPID, JavaScript/TypeScript,
+  and Python, including VS Code extensions on the Marketplace. I embed AI coding
+  agents (Claude Code, GitHub Copilot) at every stage of development as a genuine
   force multiplier.
 
 experience:
@@ -34,8 +34,8 @@ experience:
         - Drive technical strategy and product roadmap for the global cobot portfolio
         - Shape adoption decisions for AI/coding agents across the team's development workflow
       engineering:
-        - Rapid prototyping of cobot solutions integrating RAPID, RWS 2, and external APIs
-        - Direct production-code contributions (RAPID, TypeScript, Rust)
+        - Rapid prototyping and POC of cobot solutions integrating RAPID, RWS 2, and external APIs
+        - Direct production-code contributions (RAPID, JavaScript/TypeScript, Python) and AI agent tooling
 
   - period:
       from: "2020-01"
@@ -46,7 +46,7 @@ experience:
     tags: [cobot, RAPID, EGM, RWS, python, omnivance, easyrecord]
     highlights:
       leadership:
-        - Global technical reference for ABB's cobot portfolio (GoFa, YuMi, SWIFTI)
+        - Local technical reference for ABB's cobot portfolio (GoFa, YuMi, SWIFTI)
         - Technologist supporting pre-sales, customer training, and international trade shows
       engineering:
         - "Developed EasyRecord: lead-through programming software for intuitive cobot trajectory recording — the technology behind landmark demos like YuMi conducting Andrea Bocelli"
@@ -63,8 +63,8 @@ experience:
     highlights:
       leadership: []
       engineering:
-        - Product development and functional validation on the YuMi cobot line and successors
-        - Test plan definition and international rollout support for new firmware releases
+        - Collaborative robotics application development and deployment on YuMi and successor platforms
+        - Integration scouting, testing, and validation for new ecosystem products
 
   - period:
       from: "2016-04"
@@ -76,8 +76,8 @@ experience:
     highlights:
       leadership: []
       engineering:
-        - Second-level technical support on IRC5 controllers and the industrial robot portfolio
-        - Critical production issue resolution at automotive and general industry customers
+        - Second-level technical support on IRC5 controllers, robot portfolio and HMI software
+        - Critical production issue resolution at general industry customers
 
   - period:
       from: "2016-01"
@@ -126,13 +126,13 @@ education:
 skills:
   domains:
     - Collaborative robotics
-    - Force control & finishing
-    - Lead-through / teach-by-demo
+    - Intuitive interfaces / teach-by-demo
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    robotics: [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control, ROS]
-    ai_tools: [Claude Code, GitHub Copilot, MCP]
+    robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
+    coding:   [TypeScript, Python, Swift, Rust]
+    ai_tools: [Claude Code, GitHub Copilot]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell

@@ -1,7 +1,7 @@
 meta:
   language: it
   emphasis: hybrid          # leadership | engineering | hybrid
-  updated: "2026-05-14"
+  updated: "2026-05-15"
 
 person:
   name: Pietro Ilacqua
@@ -17,9 +17,9 @@ summary: |
   Ingegnere robotico con oltre 10 anni in ABB, specializzato in robot collaborativi
   e software tooling. Guido l'innovazione tecnologica — definendo la roadmap,
   prototipando soluzioni cobot e contribuendo direttamente al codice in RAPID,
-  TypeScript e Rust, incluse estensioni VS Code pubblicate sul Marketplace. Integro
-  coding agents (Claude Code, Copilot) in ogni fase dello sviluppo come vero
-  moltiplicatore di produttività.
+  JavaScript/TypeScript e Python, incluse estensioni VS Code pubblicate sul Marketplace.
+  Integro coding agents (Claude Code, GitHub Copilot) in ogni fase dello sviluppo come
+  vero moltiplicatore di produttività.
 
 experience:
   - period:
@@ -34,8 +34,8 @@ experience:
         - Guido la strategia tecnologica e la roadmap dei prodotti cobot per il business globale
         - Indirizzo le decisioni di adozione di AI/coding agents nei flussi di sviluppo del team
       engineering:
-        - Prototipazione rapida di soluzioni cobot integrando RAPID, RWS 2 e API esterne
-        - Contributi diretti al codice in produzione (RAPID, TypeScript, Rust)
+        - Prototipazione rapida e POC di soluzioni cobot integrando RAPID, RWS 2 e API esterne
+        - "Contributi diretti al codice in produzione (RAPID, JavaScript/TypeScript, Python) e AI agent tooling"
 
   - period:
       from: "2020-01"
@@ -46,7 +46,7 @@ experience:
     tags: [cobot, RAPID, EGM, RWS, python, omnivance, easyrecord]
     highlights:
       leadership:
-        - Punto di riferimento tecnico globale per il portfolio cobot ABB (GoFa, YuMi, SWIFTI)
+        - Punto di riferimento tecnico locale per il portfolio cobot ABB (GoFa, YuMi, SWIFTI)
         - Tecnologo a supporto di pre-vendita, formazione clienti e fiere internazionali
       engineering:
         - "Sviluppo di EasyRecord: software di lead-through programming per registrazione intuitiva di traiettorie cobot, alla base di demo storiche come il direttore d'orchestra YuMi con Andrea Bocelli"
@@ -63,8 +63,8 @@ experience:
     highlights:
       leadership: []
       engineering:
-        - Sviluppo prodotto e validazione funzionale sulla linea cobot YuMi e successori
-        - Definizione di test plan e supporto al lancio internazionale di nuove release firmware
+        - Sviluppo applicativo e deployment di soluzioni di robotica collaborativa su YuMi e piattaforme successive
+        - Scouting, testing e validazione di nuovi prodotti e integrazioni nell'ecosistema cobot
 
   - period:
       from: "2016-04"
@@ -76,8 +76,8 @@ experience:
     highlights:
       leadership: []
       engineering:
-        - Supporto tecnico di secondo livello su controller IRC5 e portfolio robot industriali
-        - Risoluzione di issue critiche in produzione presso clienti automotive e general industry
+        - Supporto tecnico di secondo livello su controller IRC5, portfolio robot industriali e software HMI
+        - Risoluzione di issue critiche in produzione presso clienti general industry
 
   - period:
       from: "2016-01"
@@ -126,13 +126,13 @@ education:
 skills:
   domains:
     - Robotica collaborativa
-    - Force control & finishing
-    - Lead-through / teach-by-demo
+    - Interfacce intuitive / teach-by-demo
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    robotics: [RAPID, RobotStudio, OmniCore, RWS 2, EGM, Force Control, ROS]
-    ai_tools: [Claude Code, GitHub Copilot, MCP]
+    robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
+    coding:   [TypeScript, Python, Swift, Rust]
+    ai_tools: [Claude Code, GitHub Copilot]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -158,6 +158,7 @@ languages:
     level: madrelingua
   - name: English
     level: C1
+
 beyond_work:
   - title: "Founder & frontman — Gli Animali Fantastici del Sudamerica"
     description: Band indie italiana. Songwriting, voce e performance dal vivo.
