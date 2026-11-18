@@ -1,7 +1,7 @@
 meta:
   language: it
   emphasis: hybrid          # leadership | engineering | hybrid
-  updated: "2026-05-15"
+  updated: "2026-11-18"
 
 person:
   name: Pietro Ilacqua
@@ -10,16 +10,16 @@ person:
   email: "maildipietroilacqua@gmail.com"
   links:
     linkedin: "pietro-ilacqua-b2846a59"
-    github: "<da_compilare>"
+    github: "the-water-robot"
     website: "<da_compilare>"
 
-summary: |
-  Ingegnere robotico con oltre 10 anni in ABB, specializzato in robot collaborativi
-  e software tooling. Guido l'innovazione tecnologica — definendo la roadmap,
-  prototipando soluzioni cobot e contribuendo direttamente al codice in RAPID,
-  JavaScript/TypeScript e Python, incluse estensioni VS Code pubblicate sul Marketplace.
-  Integro coding agents (Claude Code, GitHub Copilot) in ogni fase dello sviluppo come
-  vero moltiplicatore di produttività.
+summary: >
+  Ingegnere robotico con oltre 10 anni in ABB sui robot collaborativi, dal supporto
+  sul campo e i progetti cliente fino all'innovazione di prodotto. Guido la strategia
+  tecnologica cobot e continuo a scrivere codice di produzione in RAPID, TypeScript e
+  Python — tra cui EasyRecord, oggi Add-In ufficiale ABB RobotWare, e le estensioni
+  VS Code di ABB sul Marketplace. Sviluppo con AI coding agents (Claude Code, GitHub
+  Copilot) lungo tutto il ciclo di sviluppo.
 
 experience:
   - period:
@@ -49,7 +49,7 @@ experience:
         - Punto di riferimento tecnico locale per il portfolio cobot ABB (GoFa, YuMi, SWIFTI)
         - Tecnologo a supporto di pre-vendita, formazione clienti e fiere internazionali
       engineering:
-        - "Sviluppo di EasyRecord: software di lead-through programming per registrazione intuitiva di traiettorie cobot, alla base di demo storiche come il direttore d'orchestra YuMi con Andrea Bocelli"
+        - "Ideatore di EasyRecord: registrazione di traiettorie cobot in lead-through, alla base di demo storiche come YuMi direttore d'orchestra con Andrea Bocelli"
         - "Contributi alla OmniVance™ Collaborative Surface Finishing Cell: cella plug-and-play GoFa per sanding/polishing con riduzione fino al 90% del tempo di programmazione"
         - Integrazione force control e EGM (Externally Guided Motion) per applicazioni di finishing collaborativo
 
@@ -130,8 +130,8 @@ skills:
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
-    ai_tools: [Claude Code, GitHub Copilot]
+    Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
+    AI tools: [Claude Code, GitHub Copilot]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -141,9 +141,9 @@ projects:
     tags: [cobot, GoFa, force-control, finishing]
 
   - name: EasyRecord
-    url: "<da_compilare_url>"
+    url: "https://search.abb.com/library/Download.aspx?DocumentID=3HAC102712-001&LanguageCode=en&DocumentPartId=&Action=Launch"
     role: Ideatore & lead developer
-    description: "Ideato, progettato e sviluppato end-to-end: software di lead-through programming per la registrazione intuitiva di traiettorie cobot. Base della storica demo YuMi/Bocelli (2017)."
+    description: "Add-In ufficiale ABB RobotWare per GoFa e PoWa: guidi il robot a mano e ottieni un path RAPID pronto all'uso con I/O sincronizzati, più un'app FlexPendant per l'editing 3D dei percorsi. Nato dalla demo YuMi/Bocelli (2017)."
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions
@@ -155,7 +155,7 @@ projects:
 languages:
   - name: Italiano
     level: madrelingua
-  - name: English
+  - name: Inglese
     level: C1
 
 beyond_work:

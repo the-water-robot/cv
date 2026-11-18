@@ -472,3 +472,20 @@ footer {
   .cv-body { grid-template-columns: 1.5fr 1fr !important; gap: 1.5rem !important; }
   body { font-size: 10pt; }
 }
+
+/* ─── Beyond work (full width, last) ───────────────────────────────────────── */
+.cv-beyond {
+  padding-bottom: 2.5rem;
+}
+
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.15rem 3rem;
+}
+
+.beyond-grid .beyond-item {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

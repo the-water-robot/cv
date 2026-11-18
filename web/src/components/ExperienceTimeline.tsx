@@ -27,9 +27,19 @@ interface Props {
   filterLabels: { hybrid: string; leadership: string; engineering: string };
 }
 
-function formatPeriod(p: Period, presentLabel: string): string {
-  const to = p.to == null ? presentLabel : String(p.to);
-  return `${p.from} – ${to}`;
+const MONTHS = {
+  en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  it: ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"],
+};
+
+function formatDate(v: string | number, lang: "it" | "en"): string {
+  const m = /^(\d{4})-(\d{2})$/.exec(String(v));
+  return m ? `${MONTHS[lang][Number(m[2]) - 1]} ${m[1]}` : String(v);
+}
+
+function formatPeriod(p: Period, lang: "it" | "en"): string {
+  const to = p.to == null ? (lang === "it" ? "oggi" : "present") : formatDate(p.to, lang);
+  return `${formatDate(p.from, lang)} – ${to}`;
 }
 
 function getBullets(job: Job, emphasis: Emphasis): string[] {
@@ -55,7 +65,7 @@ export function ExperienceTimeline({
   const [emphasis, setEmphasis] = useState<Emphasis>(defaultEmphasis);
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
-  const presentLabel = filterLabels.hybrid === "Entrambi" ? "presente" : "present";
+  const lang = filterLabels.hybrid === "Entrambi" ? "it" : "en";
 
   const visible = activeTag
     ? jobs.filter((j) => j.tags?.includes(activeTag))
@@ -91,7 +101,7 @@ export function ExperienceTimeline({
                     {job.company}, {job.location}
                   </div>
                 </div>
-                <div className="exp-period">{formatPeriod(job.period, presentLabel)}</div>
+                <div className="exp-period">{formatPeriod(job.period, lang)}</div>
               </div>
               {isOpen && bullets.length > 0 && (
                 <ul className="exp-bullets">

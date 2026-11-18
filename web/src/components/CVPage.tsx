@@ -112,7 +112,7 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
 
       {/* Body */}
       <div className="cv-body container">
-        {/* Left: Experience + Beyond work */}
+        {/* Left: Experience */}
         <section>
           <h2 className="section-title">{labels.sectionExperience}</h2>
           <ExperienceTimeline
@@ -122,21 +122,6 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
             filterLabels={labels.filterLabels}
           />
 
-          {data.beyond_work && data.beyond_work.length > 0 && (
-            <section style={{ marginTop: "2.5rem" }}>
-              <h2 className="section-title">{labels.sectionBeyond}</h2>
-              {data.beyond_work.map((b, i) => (
-                <div key={i} className="beyond-item">
-                  <div className="beyond-title">
-                    {b.url && !b.url.startsWith("<") ? (
-                      <a href={b.url} rel="noopener noreferrer">{b.title}</a>
-                    ) : b.title}
-                  </div>
-                  <div className="beyond-desc">{b.description.trim()}</div>
-                </div>
-              ))}
-            </section>
-          )}
         </section>
 
         {/* Right: Skills + Projects + Education + Languages */}
@@ -162,7 +147,7 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
                 <div key={i} className="project-item">
                   <div className="project-name">
                     {url ? (
-                      <a href={url} rel="noopener noreferrer">{proj.name}</a>
+                      <a href={url} target="_blank" rel="noopener noreferrer">{proj.name}</a>
                     ) : proj.name}
                   </div>
                   {proj.role && <div className="project-meta">{proj.role}</div>}
@@ -178,7 +163,9 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
               <div key={i} className="edu-item">
                 <div className="edu-degree">{edu.degree}</div>
                 <div className="edu-meta">
-                  {edu.institution} {"//"} {edu.period.from}–{edu.period.to}
+                  {edu.institution} {"//"} {edu.period.from === edu.period.to
+                    ? edu.period.from
+                    : `${edu.period.from}–${edu.period.to}`}
                   {edu.grade && ` // ${edu.grade}`}
                 </div>
               </div>
@@ -196,6 +183,28 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
           </section>
         </aside>
       </div>
+
+      {/* Beyond work — full width, always last */}
+      {data.beyond_work && data.beyond_work.length > 0 && (
+        <section className="cv-beyond container">
+          <h2 className="section-title">{labels.sectionBeyond}</h2>
+          <div className="beyond-grid">
+            {data.beyond_work.map((b, i) => {
+              const url = cleanUrl(b.url);
+              return (
+                <div key={i} className="beyond-item">
+                  <div className="beyond-title">
+                    {url ? (
+                      <a href={url} target="_blank" rel="noopener noreferrer">{b.title}</a>
+                    ) : b.title}
+                  </div>
+                  <div className="beyond-desc">{b.description.trim()}</div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
     </>
   );
 }

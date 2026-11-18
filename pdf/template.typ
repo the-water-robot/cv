@@ -45,29 +45,27 @@
   v(2pt)
 }
 
-#let period-label(p) = {
-  let from = p.from
-  let to   = if p.to == none { "present" } else { p.to }
-  text(size: 7.5pt, fill: muted, from + " – " + to)
-}
-
 // ─── HEADER ──────────────────────────────────────────────────────────────────
+{% set gh = person.links.github %}
+{% set web = person.links.website %}
 #grid(
   columns: (1fr, auto),
   gutter: 8pt,
   [
-    #text(size: 18pt, weight: "bold", "{{ person.name }}")
+    #text(size: 18pt, weight: "bold", {{ person.name | t }})
     #linebreak()
-    #text(size: 10pt, fill: muted, "{{ person.title }}")
+    #text(size: 10pt, fill: muted, {{ person.title | t }})
   ],
   align(right + horizon)[
     #text(size: 7.5pt, fill: muted)[
-      {{ person.location }} \
-      #link("mailto:{{ person.email }}")[{{ person.email | replace("@", "\\@") }}] \
-      #link("https://linkedin.com/in/{{ person.links.linkedin }}")[LinkedIn] ·
-      #link("https://github.com/{{ person.links.github }}")[GitHub]
-      {% if person.links.website and person.links.website != "<da_compilare>" %}
-      · #link("{{ person.links.website }}")[Website]
+      #{{ person.location | t }} \
+      #link("mailto:{{ person.email }}")[#{{ person.email | t }}] \
+      #link("https://linkedin.com/in/{{ person.links.linkedin }}")[LinkedIn]
+      {% if gh and not gh.startswith("<") %}
+      · #link("https://github.com/{{ gh }}")[GitHub]
+      {% endif %}
+      {% if web and not web.startswith("<") %}
+      · #link("{{ web }}")[Website]
       {% endif %}
     ]
   ],
@@ -78,106 +76,99 @@
 
 // ─── SUMMARY ─────────────────────────────────────────────────────────────────
 #v(3pt)
-#text(size: 8.5pt, "{{ summary | trim }}")
+#par(justify: false, text(size: 8.5pt, {{ summary | t }}))
 #v(5pt)
 
-// ─── TWO-COLUMN BODY (65% / 35%) ─────────────────────────────────────────────
+// ─── TWO-COLUMN BODY ─────────────────────────────────────────────────────────
 #grid(
   columns: (1fr, 0.5fr),
   gutter: 14pt,
 
   // ── LEFT: Experience ───────────────────────────────────────────────────────
   [
-    #section-title("Experience")
+    #section-title({{ labels.experience | t }})
 
     {% for job in experience %}
     #grid(
       columns: (1fr, auto),
       [
-        #text(weight: "semibold", "{{ job.role }}")
+        #text(weight: "semibold", {{ job.role | t }})
         #linebreak()
-        #text(size: 8pt, fill: muted, "{{ job.company }}, {{ job.location }}")
+        #text(size: 8pt, fill: muted, {{ (job.company ~ ", " ~ job.location) | t }})
       ],
-      align(right)[#period-label((from: "{{ job.period.from }}", to: {{ "none" if job.period.to is none else '"' + job.period.to + '"' }}))]
+      align(right, text(size: 7.5pt, fill: muted, {{ job.period | period | t }})),
     )
-    {% set bullets = [] %}
-    {% if emphasis == "leadership" %}
-      {% set bullets = job.highlights.leadership %}
-    {% elif emphasis == "engineering" %}
-      {% set bullets = job.highlights.engineering %}
-    {% else %}
-      {% set bullets = (job.highlights.leadership + job.highlights.engineering) | unique %}
-    {% endif %}
-    {% if bullets %}
+    {% if job._bullets %}
     #list(
       indent: 5pt,
       body-indent: 4pt,
-      {% for b in bullets %}{% if b %}
-      [{{ b }}],
-      {% endif %}{% endfor %}
+      {% for b in job._bullets %}
+      [#{{ b | t }}],
+      {% endfor %}
     )
     {% endif %}
     #v(3pt)
     {% endfor %}
   ],
 
-  // ── RIGHT: Skills · Education · Projects · Languages · Beyond ─────────────
+  // ── RIGHT: Skills · Projects · Education · Languages ───────────────────────
   [
-    // Skills ─────────────────────────────────────────────────────────────────
-    #section-title("Skills")
+    #section-title({{ labels.skills | t }})
 
-    {% for d in skills.domains %}#chip("{{ d }}") {% endfor %}
+    {% for d in skills.domains %}#chip({{ d | t }}) {% endfor %}
     #v(4pt)
 
     {% for group, items in skills.technologies.items() %}
-    #text(size: 7pt, weight: "semibold", upper("{{ group }}"))
+    #text(size: 7pt, weight: "semibold", upper({{ group | t }}))
     #linebreak()
-    {% for item in items %}#chip("{{ item }}") {% endfor %}
+    {% for item in items %}#chip({{ item | t }}) {% endfor %}
     #v(3pt)
     {% endfor %}
 
-    // Education ──────────────────────────────────────────────────────────────
-    #section-title("Education")
-
-    {% for edu in education %}
-    #text(size: 7.5pt, weight: "semibold", "{{ edu.degree }}")
-    #linebreak()
-    #text(size: 7pt, fill: muted)[{{ edu.institution }} #h(1fr) {{ edu.period.from }}–{{ edu.period.to }}{% if edu.grade is defined %} · {{ edu.grade }}{% endif %}]
-    #v(3pt)
-    {% endfor %}
-
-    // Projects ───────────────────────────────────────────────────────────────
-    #section-title("Projects")
+    #section-title({{ labels.projects | t }})
 
     {% for proj in projects %}
-    {% if proj.url is defined and proj.url and not proj.url.startswith("<") %}
-    #link("{{ proj.url }}")[#text(size: 7.5pt, weight: "semibold", "{{ proj.name }}")]
+    {% if proj.url and not proj.url.startswith("<") %}
+    #link({{ proj.url | t }})[#text(size: 7.5pt, weight: "semibold", fill: accent, {{ proj.name | t }})]
     {% else %}
-    #text(size: 7.5pt, weight: "semibold", "{{ proj.name }}")
+    #text(size: 7.5pt, weight: "semibold", {{ proj.name | t }})
     {% endif %}
     #linebreak()
-    #text(size: 7pt, "{{ proj.description | trim }}")
+    #text(size: 7pt, {{ proj.description | t }})
     #v(3pt)
     {% endfor %}
 
-    // Languages ──────────────────────────────────────────────────────────────
-    #section-title("Languages")
+    #section-title({{ labels.education | t }})
 
-    #text(size: 7.5pt)[{% for lang in languages %}{{ lang.name }} #text(fill: muted)[{{ lang.level }}]{% if not loop.last %} · {% endif %}{% endfor %}]
-    #v(2pt)
-
-    // Beyond work ─────────────────────────────────────────────────────────────
-    {% if beyond_work is defined and beyond_work %}
-    #section-title("Beyond work")
-
-    {% for item in beyond_work %}
-    {% if item.url is defined and item.url and not item.url.startswith("<") %}
-    #link("{{ item.url }}")[#text(size: 7.5pt, weight: "semibold", "{{ item.title }}")]
-    {% else %}
-    #text(size: 7.5pt, weight: "semibold", "{{ item.title }}")
-    {% endif %}
+    {% for edu in education %}
+    #text(size: 7.5pt, weight: "semibold", {{ edu.degree | t }})
     #linebreak()
+    #text(size: 7pt, fill: muted)[#{{ edu.institution | t }} #h(1fr) #{{ ((edu.period | period) ~ (" · " ~ edu.grade if edu.grade is defined else "")) | t }}]
+    #v(3pt)
     {% endfor %}
-    {% endif %}
+
+    #section-title({{ labels.languages | t }})
+
+    #text(size: 7.5pt)[{% for lang in languages %}#{{ lang.name | t }} #text(fill: muted, {{ lang.level | t }}){% if not loop.last %} · {% endif %}{% endfor %}]
   ],
 )
+
+// ─── BEYOND WORK (full width, last) ──────────────────────────────────────────
+{% if beyond_work %}
+#section-title({{ labels.beyond | t }})
+#grid(
+  columns: (1fr,) * {{ [beyond_work | length, 3] | min }},
+  gutter: 14pt,
+  {% for item in beyond_work %}
+  [
+    {% if item.url and not item.url.startswith("<") %}
+    #link({{ item.url | t }})[#text(size: 7.5pt, weight: "semibold", fill: accent, {{ item.title | t }})]
+    {% else %}
+    #text(size: 7.5pt, weight: "semibold", {{ item.title | t }})
+    {% endif %}
+    #linebreak()
+    #text(size: 7pt, {{ item.description | t }})
+  ],
+  {% endfor %}
+)
+{% endif %}

@@ -28,6 +28,44 @@ DIST_DIR = ROOT / "pdf" / "dist"
 LANGS = ["it", "en"]
 EMPHASES = ["leadership", "engineering", "hybrid"]
 
+MONTHS = {
+    "en": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "it": ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"],
+}
+
+LABELS = {
+    "en": {
+        "experience": "Experience", "skills": "Skills", "education": "Education",
+        "projects": "Projects", "languages": "Languages", "beyond": "Beyond work",
+        "present": "present",
+    },
+    "it": {
+        "experience": "Esperienza", "skills": "Competenze", "education": "Formazione",
+        "projects": "Progetti", "languages": "Lingue", "beyond": "Beyond work",
+        "present": "oggi",
+    },
+}
+
+
+def typst_str(value: object) -> str:
+    """Render any value as a safely escaped Typst string literal."""
+    s = " ".join(str(value).split())
+    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def fmt_date(value: object, lang: str) -> str:
+    s = str(value)
+    if len(s) == 7 and s[4] == "-":
+        return f"{MONTHS[lang][int(s[5:]) - 1]} {s[:4]}"
+    return s
+
+
+def fmt_period(period: dict, lang: str) -> str:
+    start = fmt_date(period["from"], lang)
+    end = period.get("to")
+    end = LABELS[lang]["present"] if end is None else fmt_date(end, lang)
+    return start if start == end else f"{start} – {end}"
+
 
 def load_yaml(lang: str) -> dict:
     yaml = YAML()
@@ -70,9 +108,12 @@ def render_typ(data: dict, emphasis: str) -> str:
         comment_start_string="{##",
         comment_end_string="##}",
     )
+    lang = data["meta"]["language"]
+    env.filters["t"] = typst_str
+    env.filters["period"] = lambda p: fmt_period(p, lang)
     template = env.get_template("template.typ")
     enriched = apply_emphasis(data, emphasis)
-    return template.render(**enriched)
+    return template.render(**enriched, labels=LABELS[lang])
 
 
 def compile_pdf(typ_source: str, output_path: Path) -> None:

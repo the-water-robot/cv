@@ -1,7 +1,7 @@
 meta:
   language: en
   emphasis: hybrid
-  updated: "2026-05-14"
+  updated: "2026-11-18"
 
 person:
   name: Pietro Ilacqua
@@ -10,16 +10,16 @@ person:
   email: "maildipietroilacqua@gmail.com"
   links:
     linkedin: "pietro-ilacqua-b2846a59"
-    github: "<da_compilare>"
+    github: "the-water-robot"
     website: "<da_compilare>"
 
-summary: |
-  Robotics engineer with 10+ years at ABB, specializing in collaborative robots
-  and software tooling. I lead technology innovation — shaping roadmaps,
-  prototyping cobot solutions, and shipping production code in RAPID, JavaScript/TypeScript,
-  and Python, including VS Code extensions on the Marketplace. I embed AI coding
-  agents (Claude Code, GitHub Copilot) at every stage of development as a genuine
-  force multiplier.
+summary: >
+  Robotics engineer with 10+ years at ABB in collaborative robots, from field
+  support and customer projects to product innovation. I lead cobot technology
+  strategy and still ship production code in RAPID, TypeScript and Python — including
+  EasyRecord, now an official ABB RobotWare Add-In, and ABB's VS Code extensions on
+  the Marketplace. I build with AI coding agents (Claude Code, GitHub Copilot)
+  across the whole development cycle.
 
 experience:
   - period:
@@ -49,7 +49,7 @@ experience:
         - Local technical reference for ABB's cobot portfolio (GoFa, YuMi, SWIFTI)
         - Technologist supporting pre-sales, customer training, and international trade shows
       engineering:
-        - "Developed EasyRecord: lead-through programming software for intuitive cobot trajectory recording — the technology behind landmark demos like YuMi conducting Andrea Bocelli"
+        - "Created EasyRecord: lead-through path recording for cobots, behind landmark demos like YuMi conducting Andrea Bocelli"
         - "Contributed to the OmniVance™ Collaborative Surface Finishing Cell: plug-and-play GoFa cell for sanding/polishing, cutting programming time by up to 90%"
         - Force control and EGM (Externally Guided Motion) integration for collaborative finishing applications
 
@@ -130,8 +130,8 @@ skills:
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
-    ai_tools: [Claude Code, GitHub Copilot]
+    Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
+    AI tools: [Claude Code, GitHub Copilot]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
@@ -141,9 +141,9 @@ projects:
     tags: [cobot, GoFa, force-control, finishing]
 
   - name: EasyRecord
-    url: "<da_compilare_url>"
+    url: "https://search.abb.com/library/Download.aspx?DocumentID=3HAC102712-001&LanguageCode=en&DocumentPartId=&Action=Launch"
     role: Creator & lead developer
-    description: Conceived, designed, and built the lead-through programming software for intuitive cobot trajectory recording. Foundation of the YuMi/Bocelli orchestra demo (2017).
+    description: Official ABB RobotWare Add-In for GoFa and PoWa — hand-guide the robot, get a ready-to-run RAPID path with synced I/O, plus a 3D path-editing FlexPendant app. Born from the YuMi/Bocelli demo (2017).
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions
@@ -157,6 +157,7 @@ languages:
     level: native
   - name: English
     level: C1
+
 beyond_work:
   - title: "Co-Founder & frontman — Gli Animali Fantastici del Sudamerica"
     description: Italian indie band. Songwriting, lead vocals, and live performance.
