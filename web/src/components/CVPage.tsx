@@ -27,6 +27,7 @@ interface CVData {
     institution: string;
     period: { from: number; to: number };
     grade?: string;
+    thesis?: string;
   }>;
   skills: { domains: string[]; technologies: Record<string, string[]> };
   projects: Array<{
@@ -54,6 +55,7 @@ interface Labels {
   sectionProjects: string;
   sectionLanguages: string;
   sectionBeyond: string;
+  thesis: string;
   downloadPdf: string;
 }
 
@@ -172,6 +174,11 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
                     : `${edu.period.from}–${edu.period.to}`}
                   {edu.grade && ` // ${edu.grade}`}
                 </div>
+                {edu.thesis && (
+                  <div className="edu-thesis">
+                    {labels.thesis}: {edu.thesis}
+                  </div>
+                )}
               </div>
             ))}
           </section>

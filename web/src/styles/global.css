@@ -496,3 +496,12 @@ footer {
   color: var(--text-faint);
   padding: 1rem 0;
 }
+
+.edu-thesis {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--text-dim);
+  margin-top: 0.25rem;
+  line-height: 1.45;
+}

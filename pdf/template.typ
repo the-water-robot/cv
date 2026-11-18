@@ -10,7 +10,7 @@
 
 #set page(
   paper: "a4",
-  margin: (x: 1.4cm, y: 1.1cm),
+  margin: (x: 1.4cm, y: 1.0cm),
 )
 
 #set text(
@@ -39,13 +39,11 @@
   text(size: 7pt, fill: tag-fg, font: ("IBM Plex Mono", "Courier New", "monospace"), body),
 )
 
-#let section-title(body) = {
-  v(2pt)
-  text(size: 7pt, weight: "bold", fill: accent, upper(body))
-  v(1pt)
-  hrule()
-  v(2pt)
-}
+#let section-title(body) = block(above: 14pt, below: 8pt, stack(
+  spacing: 4pt,
+  text(size: 7pt, weight: "bold", fill: accent, upper(body)),
+  hrule(),
+))
 
 // ─── HEADER ──────────────────────────────────────────────────────────────────
 {% set gh = person.links.github %}
@@ -150,6 +148,10 @@
     #text(size: 7.5pt, weight: "semibold", {{ edu.degree | t }})
     #linebreak()
     #text(size: 7pt, fill: muted)[#{{ edu.institution | t }} #h(1fr) #{{ ((edu.period | period) ~ (" · " ~ edu.grade if edu.grade is defined else "")) | t }}]
+    {% if edu.thesis is defined %}
+    #linebreak()
+    #text(size: 7pt, style: "italic", {{ (labels.thesis ~ ": " ~ edu.thesis) | t }})
+    {% endif %}
     #v(3pt)
     {% endfor %}
 

@@ -93,7 +93,8 @@
               "to":   { "type": "integer" }
             }
           },
-          "grade": { "type": "string" }
+          "grade": { "type": "string" },
+          "thesis": { "type": "string", "minLength": 1 }
         }
       }
     },

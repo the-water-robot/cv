@@ -109,6 +109,7 @@ education:
       from: 2012
       to: 2015
     grade: "100/110"
+    thesis: "Nodo ROS per controllo di traiettoria e obstacle avoidance di un AGV"
 
   - degree: Programma Erasmus — Artificial Intelligence
     institution: University of Southampton (UK)

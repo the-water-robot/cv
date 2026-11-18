@@ -46,6 +46,7 @@ const cvCollection = defineCollection({
         institution: z.string(),
         period: z.object({ from: z.number(), to: z.number() }),
         grade: z.string().optional(),
+        thesis: z.string().optional(),
       }),
     ),
     skills: z.object({
