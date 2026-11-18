@@ -43,7 +43,7 @@ experience:
     role: Cobot Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italia
-    tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, Laser scanner (SICK, Keyence), python, omnivance, easyrecord]
+    tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, "Laser scanner (SICK, Keyence)", python, omnivance, easyrecord]
     highlights:
       leadership:
         - Riferimento tecnico locale per il portfolio cobot ABB (GoFa, YuMi, SWIFTI)
@@ -133,7 +133,7 @@ skills:
   technologies:
     Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
     Vision: [Visione industriale, Cognex, Keyence]
-    Safety: [ISO 10218, ISO/TS 15066, Laser scanner (SICK, Keyence)]
+    Safety: [ISO 10218, ISO/TS 15066, "Laser scanner (SICK, Keyence)"]
     Automation: [PLC, B&R]
     3D web: [Three.js, Digital twin]
     AI tools: [Claude Code, GitHub Copilot]
