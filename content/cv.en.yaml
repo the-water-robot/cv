@@ -43,7 +43,7 @@ experience:
     role: Cobot Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, python, omnivance, easyrecord]
+    tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, Laser scanners (SICK, Keyence), python, omnivance, easyrecord]
     highlights:
       leadership:
         - Local technical reference for ABB's cobot portfolio (GoFa, YuMi, SWIFTI)
@@ -110,18 +110,18 @@ education:
       to: 2015
     grade: "100/110"
 
+  - degree: Erasmus Programme — Artificial Intelligence
+    institution: University of Southampton (UK)
+    period:
+      from: 2013
+      to: 2013
+
   - degree: Bachelor's Degree in Automation Engineering
     institution: Politecnico di Milano
     period:
       from: 2009
       to: 2012
     grade: "92/110"
-
-  - degree: Erasmus Programme — Artificial Intelligence
-    institution: University of Southampton (UK)
-    period:
-      from: 2013
-      to: 2013
 
 skills:
   domains:
@@ -132,7 +132,7 @@ skills:
   technologies:
     Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
     Vision: [Machine vision, Cognex, Keyence]
-    Safety: [ISO 10218, ISO/TS 15066]
+    Safety: [ISO 10218, ISO/TS 15066, Laser scanners (SICK, Keyence)]
     Automation: [PLC, B&R]
     3D web: [Three.js, Digital twin]
     AI tools: [Claude Code, GitHub Copilot]
