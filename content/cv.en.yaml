@@ -28,11 +28,11 @@ experience:
     role: Cobot Innovation & Technology Leader
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [leadership, cobot, strategy, roadmap, innovation, RAPID, RWS, Claude Code, GitHub Copilot]
+    tags: [leadership, cobot, strategy, roadmap, innovation, RAPID, RWS, Claude Code, GitHub Copilot, Three.js, Digital twin, easyrecord]
     highlights:
       leadership:
         - Drive technical strategy and product roadmap for the global cobot portfolio
-        - Drive adoption of AI coding agents across the team's development workflow
+        - Lead adoption of AI coding agents in the team's development workflow
       engineering:
         - Rapid prototypes and POCs of cobot solutions with RAPID, RWS 2 and external APIs
         - Direct production-code contributions (RAPID, JavaScript/TypeScript, Python) and AI agent tooling
@@ -133,6 +133,8 @@ skills:
     Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
     Vision: [Machine vision, Cognex, Keyence]
     Safety: [ISO 10218, ISO/TS 15066]
+    Automation: [PLC, B&R]
+    3D web: [Three.js, Digital twin]
     AI tools: [Claude Code, GitHub Copilot]
 
 projects:
@@ -145,7 +147,7 @@ projects:
   - name: EasyRecord
     url: "https://search.abb.com/library/Download.aspx?DocumentID=3HAC102712-001&LanguageCode=en&DocumentPartId=&Action=Launch"
     role: Creator & lead developer
-    description: Official ABB RobotWare Add-In for GoFa and PoWa — hand-guide the robot, get a ready-to-run RAPID path with synced I/O, plus a 3D path-editing FlexPendant app. Born from the YuMi/Bocelli demo (2017).
+    description: Official ABB RobotWare Add-In for GoFa and PoWa — hand-guide the robot, get a ready-to-run RAPID path with synced I/O, plus PathEdit, a Three.js web app for 3D path editing on the FlexPendant. Born from the YuMi/Bocelli demo (2017).
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions

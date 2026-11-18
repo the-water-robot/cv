@@ -28,7 +28,7 @@ experience:
     role: Cobot Innovation & Technology Leader
     company: ABB Robotics
     location: Sesto San Giovanni, Italia
-    tags: [leadership, cobot, strategy, roadmap, innovation, RAPID, RWS, Claude Code, GitHub Copilot]
+    tags: [leadership, cobot, strategy, roadmap, innovation, RAPID, RWS, Claude Code, GitHub Copilot, Three.js, Digital twin, easyrecord]
     highlights:
       leadership:
         - Guido strategia tecnologica e roadmap del portfolio cobot globale
@@ -133,6 +133,8 @@ skills:
     Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
     Vision: [Visione industriale, Cognex, Keyence]
     Safety: [ISO 10218, ISO/TS 15066]
+    Automation: [PLC, B&R]
+    3D web: [Three.js, Digital twin]
     AI tools: [Claude Code, GitHub Copilot]
 
 projects:
@@ -145,7 +147,7 @@ projects:
   - name: EasyRecord
     url: "https://search.abb.com/library/Download.aspx?DocumentID=3HAC102712-001&LanguageCode=en&DocumentPartId=&Action=Launch"
     role: Ideatore & lead developer
-    description: "Add-In ufficiale ABB RobotWare per GoFa e PoWa: guidi il robot a mano e ottieni un path RAPID pronto all'uso con I/O sincronizzati, più un'app FlexPendant per l'editing 3D dei percorsi. Nato dalla demo YuMi/Bocelli (2017)."
+    description: "Add-In ufficiale ABB RobotWare per GoFa e PoWa: guidi il robot a mano e ottieni un path RAPID pronto all'uso con I/O sincronizzati, più PathEdit, web app Three.js per l'editing 3D dei percorsi su FlexPendant. Nato dalla demo YuMi/Bocelli (2017)."
     tags: [cobot, lead-through, YuMi, teach-by-demo]
 
   - name: ABB Robotics — VS Code Extensions

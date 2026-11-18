@@ -120,12 +120,16 @@
     {% for d in skills.domains %}#chip({{ d | t }}) {% endfor %}
     #v(4pt)
 
-    {% for group, items in skills.technologies.items() %}
-    #text(size: 7pt, weight: "semibold", upper({{ group | t }}))
-    #linebreak()
-    {% for item in items %}#chip({{ item | t }}) {% endfor %}
+    #grid(
+      columns: (auto, 1fr),
+      column-gutter: 6pt,
+      row-gutter: 5pt,
+      {% for group, items in skills.technologies.items() %}
+      pad(top: 2.5pt, text(size: 6.5pt, weight: "semibold", fill: muted, upper({{ group | t }}))),
+      par(leading: 7pt)[{% for item in items %}#chip({{ item | t }}) {% endfor %}],
+      {% endfor %}
+    )
     #v(3pt)
-    {% endfor %}
 
     #section-title({{ labels.projects | t }})
 
