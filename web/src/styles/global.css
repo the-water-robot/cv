@@ -489,3 +489,10 @@ footer {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
+.exp-empty {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  padding: 1rem 0;
+}

@@ -67,14 +67,21 @@ export function ExperienceTimeline({
 
   const lang = filterLabels.hybrid === "Entrambi" ? "it" : "en";
 
+  const norm = (t: string) => t.toLowerCase().replace(/[\s_-]+/g, "");
   const visible = activeTag
-    ? jobs.filter((j) => j.tags?.includes(activeTag))
+    ? jobs.filter((j) => j.tags?.some((t) => norm(t) === norm(activeTag)))
     : jobs;
+  const emptyLabel = lang === "it" ? "Nessun ruolo con il tag" : "No role tagged";
 
   return (
     <div>
       <FilterBar value={emphasis} onChange={setEmphasis} labels={filterLabels} />
       <div>
+        {activeTag && visible.length === 0 && (
+          <p className="exp-empty">
+            {emptyLabel} <strong>{activeTag}</strong>.
+          </p>
+        )}
         {visible.map((job, i) => {
           const bullets = getBullets(job, emphasis).filter(Boolean);
           const isOpen = openIdx === i;

@@ -11,7 +11,7 @@ person:
   links:
     linkedin: "pietro-ilacqua-b2846a59"
     github: "the-water-robot"
-    website: "<da_compilare>"
+    website: "https://the-water-robot.github.io/cv/"
 
 summary: >
   Robotics engineer with 10+ years at ABB in collaborative robots, from field
@@ -28,26 +28,26 @@ experience:
     role: Cobot Innovation & Technology Leader
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [leadership, cobot, strategy, roadmap, innovation]
+    tags: [leadership, cobot, strategy, roadmap, innovation, RAPID, RWS, Claude Code, GitHub Copilot]
     highlights:
       leadership:
         - Drive technical strategy and product roadmap for the global cobot portfolio
-        - Shape adoption decisions for AI/coding agents across the team's development workflow
+        - Drive adoption of AI coding agents across the team's development workflow
       engineering:
-        - Rapid prototyping and POC of cobot solutions integrating RAPID, RWS 2, and external APIs
+        - Rapid prototypes and POCs of cobot solutions with RAPID, RWS 2 and external APIs
         - Direct production-code contributions (RAPID, JavaScript/TypeScript, Python) and AI agent tooling
 
   - period:
       from: "2020-01"
-      to: "2025-05"
+      to: "2025-04"
     role: Cobot Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [cobot, RAPID, EGM, RWS, python, omnivance, easyrecord]
+    tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, python, omnivance, easyrecord]
     highlights:
       leadership:
         - Local technical reference for ABB's cobot portfolio (GoFa, YuMi, SWIFTI)
-        - Technologist supporting pre-sales, customer training, and international trade shows
+        - Technologist for pre-sales, customer training and international trade shows
       engineering:
         - "Created EasyRecord: lead-through path recording for cobots, behind landmark demos like YuMi conducting Andrea Bocelli"
         - "Contributed to the OmniVance™ Collaborative Surface Finishing Cell: plug-and-play GoFa cell for sanding/polishing, cutting programming time by up to 90%"
@@ -59,7 +59,7 @@ experience:
     role: Cobot Product Engineering Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [cobot, product-engineering, YuMi]
+    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio]
     highlights:
       leadership: []
       engineering:
@@ -72,11 +72,11 @@ experience:
     role: Robotics Unit Technical Support Engineer
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [robotics, support, IRC5]
+    tags: [robotics, support, IRC5, RAPID, RobotStudio]
     highlights:
       leadership: []
       engineering:
-        - Second-level technical support on IRC5 controllers, robot portfolio and HMI software
+        - Second-level support on IRC5 controllers, robot portfolio and HMI software
         - Critical production issue resolution at general industry customers
 
   - period:
@@ -130,7 +130,8 @@ skills:
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
+    Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
+    Safety: [ISO 10218, ISO/TS 15066]
     AI tools: [Claude Code, GitHub Copilot]
 
 projects:

@@ -11,6 +11,27 @@ const data = cv.data;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const pdfUrl = `${base}cv_it.pdf`;
 
+const pageUrl = new URL(`${base}it/`, Astro.site).href;
+const gh = data.person.links.github;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: data.person.name,
+  jobTitle: data.person.title,
+  url: pageUrl,
+  address: { "@type": "PostalAddress", addressLocality: data.person.location },
+  worksFor: { "@type": "Organization", name: data.experience[0]?.company },
+  alumniOf: [...new Set(data.education.map((e) => e.institution))].map((name) => ({
+    "@type": "CollegeOrUniversity",
+    name,
+  })),
+  knowsAbout: [...data.skills.domains, ...Object.values(data.skills.technologies).flat()],
+  sameAs: [
+    `https://www.linkedin.com/in/${data.person.links.linkedin}`,
+    ...(gh && !gh.startsWith("<") ? [`https://github.com/${gh}`] : []),
+  ],
+};
+
 const labels = {
   filterLabels: { hybrid: "Entrambi", leadership: "Leadership", engineering: "Engineering" },
   sectionExperience: "Esperienza",
@@ -34,6 +55,8 @@ const labels = {
     <meta property="og:title" content={`${data.person.name} — CV`} />
     <meta property="og:description" content={`CV di ${data.person.name} — ${data.person.title}`} />
     <meta property="og:type" content="profile" />
+    <meta property="og:url" content={pageUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="alternate" hreflang="it" href={`${base}`} />
     <link rel="alternate" hreflang="en" href={`${base}en/`} />
     <link rel="canonical" href={`${base}`} />

@@ -75,7 +75,11 @@ export function CVPage({ data, pdfUrl, labels }: Props) {
   const email = cleanUrl(data.person.email);
   const linkedin = cleanUrl(data.person.links.linkedin);
   const github = cleanUrl(data.person.links.github);
-  const website = cleanUrl(data.person.links.website);
+  // Skip the website link when it points back to this very site.
+  const siteRoot = `${import.meta.env.SITE}${import.meta.env.BASE_URL}`.replace(/\/+$/, "");
+  const rawWebsite = cleanUrl(data.person.links.website);
+  const website =
+    rawWebsite && rawWebsite.replace(/\/+$/, "") !== siteRoot ? rawWebsite : undefined;
 
   return (
     <>

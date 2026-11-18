@@ -2,8 +2,10 @@
 // Jinja2 template — rendered by pdf/build.py before typst compilation.
 
 #set document(
-  title: "{{ person.name }} — CV",
-  author: "{{ person.name }}",
+  title: {{ (person.name ~ " — CV") | t }},
+  author: {{ person.name | t }},
+  description: {{ person.title | t }},
+  keywords: ({% for d in skills.domains %}{{ d | t }}, {% endfor %}{% for items in skills.technologies.values() %}{% for i in items %}{{ i | t }}, {% endfor %}{% endfor %}),
 )
 
 #set page(
@@ -38,7 +40,7 @@
 )
 
 #let section-title(body) = {
-  v(4pt)
+  v(2pt)
   text(size: 7pt, weight: "bold", fill: accent, upper(body))
   v(1pt)
   hrule()
@@ -65,7 +67,7 @@
       · #link("https://github.com/{{ gh }}")[GitHub]
       {% endif %}
       {% if web and not web.startswith("<") %}
-      · #link("{{ web }}")[Website]
+      · #link("{{ web }}")[#{{ labels.website | t }}]
       {% endif %}
     ]
   ],

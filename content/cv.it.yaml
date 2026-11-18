@@ -11,7 +11,7 @@ person:
   links:
     linkedin: "pietro-ilacqua-b2846a59"
     github: "the-water-robot"
-    website: "<da_compilare>"
+    website: "https://the-water-robot.github.io/cv/"
 
 summary: >
   Ingegnere robotico con oltre 10 anni in ABB sui robot collaborativi, dal supporto
@@ -28,25 +28,25 @@ experience:
     role: Cobot Innovation & Technology Leader
     company: ABB Robotics
     location: Sesto San Giovanni, Italia
-    tags: [leadership, cobot, strategy, roadmap, innovation]
+    tags: [leadership, cobot, strategy, roadmap, innovation, RAPID, RWS, Claude Code, GitHub Copilot]
     highlights:
       leadership:
-        - Guido la strategia tecnologica e la roadmap dei prodotti cobot per il business globale
-        - Indirizzo le decisioni di adozione di AI/coding agents nei flussi di sviluppo del team
+        - Guido strategia tecnologica e roadmap del portfolio cobot globale
+        - Indirizzo l'adozione di AI coding agents nei flussi di sviluppo del team
       engineering:
-        - Prototipazione rapida e POC di soluzioni cobot integrando RAPID, RWS 2 e API esterne
+        - Prototipi rapidi e POC di soluzioni cobot con RAPID, RWS 2 e API esterne
         - "Contributi diretti al codice in produzione (RAPID, JavaScript/TypeScript, Python) e AI agent tooling"
 
   - period:
       from: "2020-01"
-      to: "2025-05"
+      to: "2025-04"
     role: Cobot Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italia
-    tags: [cobot, RAPID, EGM, RWS, python, omnivance, easyrecord]
+    tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, python, omnivance, easyrecord]
     highlights:
       leadership:
-        - Punto di riferimento tecnico locale per il portfolio cobot ABB (GoFa, YuMi, SWIFTI)
+        - Riferimento tecnico locale per il portfolio cobot ABB (GoFa, YuMi, SWIFTI)
         - Tecnologo a supporto di pre-vendita, formazione clienti e fiere internazionali
       engineering:
         - "Ideatore di EasyRecord: registrazione di traiettorie cobot in lead-through, alla base di demo storiche come YuMi direttore d'orchestra con Andrea Bocelli"
@@ -59,12 +59,12 @@ experience:
     role: Cobot Product Engineering Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italia
-    tags: [cobot, product-engineering, YuMi]
+    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio]
     highlights:
       leadership: []
       engineering:
         - Sviluppo applicativo e deployment di soluzioni di robotica collaborativa su YuMi e piattaforme successive
-        - Scouting, testing e validazione di nuovi prodotti e integrazioni nell'ecosistema cobot
+        - Scouting, test e validazione di nuovi prodotti e integrazioni dell'ecosistema
 
   - period:
       from: "2016-04"
@@ -72,7 +72,7 @@ experience:
     role: Robotics Unit Technical Support Engineer
     company: ABB Robotics
     location: Sesto San Giovanni, Italia
-    tags: [robotics, support, IRC5]
+    tags: [robotics, support, IRC5, RAPID, RobotStudio]
     highlights:
       leadership: []
       engineering:
@@ -100,7 +100,7 @@ experience:
     highlights:
       leadership: []
       engineering:
-        - Sviluppo di soluzioni di automazione industriale a supporto delle linee produttive
+        - Soluzioni di automazione industriale a supporto delle linee produttive
 
 education:
   - degree: Laurea Magistrale in Ingegneria dell'Automazione
@@ -130,7 +130,8 @@ skills:
     - AI adoption & coding agents
     - Innovation strategy
   technologies:
-    Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS]
+    Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
+    Safety: [ISO 10218, ISO/TS 15066]
     AI tools: [Claude Code, GitHub Copilot]
 
 projects:

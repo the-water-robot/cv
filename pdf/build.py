@@ -37,12 +37,12 @@ LABELS = {
     "en": {
         "experience": "Experience", "skills": "Skills", "education": "Education",
         "projects": "Projects", "languages": "Languages", "beyond": "Beyond work",
-        "present": "present",
+        "present": "present", "website": "Web CV",
     },
     "it": {
         "experience": "Esperienza", "skills": "Competenze", "education": "Formazione",
         "projects": "Progetti", "languages": "Lingue", "beyond": "Beyond work",
-        "present": "oggi",
+        "present": "oggi", "website": "CV online",
     },
 }
 
