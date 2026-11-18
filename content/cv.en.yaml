@@ -135,7 +135,7 @@ skills:
     Vision: [Machine vision, Cognex, Keyence]
     Safety: [ISO 10218, ISO/TS 15066, "Laser scanners (SICK, Keyence)"]
     Automation: [PLC, B&R]
-    3D web: [Three.js, Digital twin]
+    Web: [Three.js, Digital twin, MkDocs]
     AI tools: [Claude Code, GitHub Copilot]
 
 projects:
