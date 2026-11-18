@@ -59,12 +59,12 @@ experience:
     role: Cobot Product Engineering Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio]
+    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio, Machine vision, Cognex, Keyence]
     highlights:
       leadership: []
       engineering:
         - Collaborative robotics application development and deployment on YuMi and successor platforms
-        - Integration scouting, testing, and validation for new ecosystem products
+        - Integration scouting, testing and validation of ecosystem products, incl. machine vision (Cognex, Keyence)
 
   - period:
       from: "2016-04"
@@ -131,6 +131,7 @@ skills:
     - Innovation strategy
   technologies:
     Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
+    Vision: [Machine vision, Cognex, Keyence]
     Safety: [ISO 10218, ISO/TS 15066]
     AI tools: [Claude Code, GitHub Copilot]
 
