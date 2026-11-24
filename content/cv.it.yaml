@@ -16,8 +16,8 @@ person:
 summary: >
   Ingegnere robotico con oltre 10 anni in ABB sui robot collaborativi, dal supporto
   sul campo e i progetti cliente fino all'innovazione di prodotto. Guido la strategia
-  tecnologica cobot e continuo a scrivere codice di produzione in RAPID, TypeScript e
-  Python — tra cui EasyRecord, oggi Add-In ufficiale ABB RobotWare, e le estensioni
+  tecnologica cobot e continuo a scrivere codice di produzione in RAPID e JavaScript —
+  tra cui EasyRecord, oggi Add-In ufficiale ABB RobotWare, e le estensioni
   VS Code di ABB sul Marketplace. Sviluppo con AI coding agents (Claude Code, GitHub
   Copilot) lungo tutto il ciclo di sviluppo.
 
@@ -34,8 +34,8 @@ experience:
         - Guido strategia tecnologica e roadmap del portfolio cobot globale
         - Indirizzo l'adozione di AI coding agents nei flussi di sviluppo del team
       engineering:
-        - Prototipi rapidi e POC di soluzioni cobot con RAPID, RWS 2 e API esterne
-        - "Contributi diretti al codice in produzione (RAPID, JavaScript/TypeScript, Python) e AI agent tooling"
+        - Prototipi rapidi e POC di soluzioni cobot con RAPID, RWS2, Python
+        - "Contributi diretti al codice in produzione (RAPID, JavaScript) e AI agent tooling"
 
   - period:
       from: "2020-01"
@@ -46,12 +46,11 @@ experience:
     tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, "Laser scanner (SICK, Keyence)", python, omnivance, easyrecord]
     highlights:
       leadership:
-        - Riferimento tecnico locale per il portfolio cobot ABB (GoFa, YuMi, SWIFTI)
-        - Tecnologo a supporto di pre-vendita, formazione clienti e fiere internazionali
+        - Riferimento tecnico locale per il portfolio cobot ABB
+        - Tecnologo a supporto di pre-vendita, formazione clienti e fiere
       engineering:
         - "Ideatore di EasyRecord: registrazione di traiettorie cobot in lead-through, alla base di demo storiche come YuMi direttore d'orchestra con Andrea Bocelli"
-        - "Contributi alla OmniVance™ Collaborative Surface Finishing Cell: cella plug-and-play GoFa per sanding/polishing con riduzione fino al 90% del tempo di programmazione"
-        - Integrazione force control e EGM (Externally Guided Motion) per applicazioni di finishing collaborativo
+        - "Software OmniVance™ Collaborative Surface Finishing Cell: cella plug-and-play GoFa per sanding/polishing in Force Control"
 
   - period:
       from: "2018-02"
@@ -59,7 +58,7 @@ experience:
     role: Cobot Product Engineering Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italia
-    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio, Visione industriale, Cognex, Keyence]
+    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio, "Visione industriale (Cognex, Keyence)"]
     highlights:
       leadership: []
       engineering:
@@ -132,17 +131,17 @@ skills:
     - Innovation strategy
   technologies:
     Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
-    Vision: [Visione industriale, Cognex, Keyence]
-    Safety: [ISO 10218, ISO/TS 15066, "Laser scanner (SICK, Keyence)"]
-    Automation: [PLC, B&R]
-    Web: [Three.js, Digital twin, MkDocs]
+    Vision: ["Visione industriale (Cognex, Keyence)"]
+    Safety: [ISO/TS 15066, "Laser scanner (SICK, Keyence)"]
+    Automation: ["PLC/HMI B&R"]
+    Web: [Three.js, MkDocs]
     AI tools: [Claude Code, GitHub Copilot]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
     url: https://www.abb.com/global/en/areas/robotics/solutions/application-cells/omnivance-collaborative-surface-finishing-cell
     role: Cobot specialist contributor
-    description: Cella GoFa plug-and-play per sanding & polishing con force control integrato. Fino al 90% di tempo di programmazione in meno.
+    description: Cella GoFa plug-and-play per sanding & polishing in Force Control, con forza di contatto costante sul pezzo.
     tags: [cobot, GoFa, force-control, finishing]
 
   - name: EasyRecord
@@ -155,7 +154,7 @@ projects:
     url: "https://marketplace.visualstudio.com/publishers/abb-robotics-ecosystem"
     role: Publisher / lead developer
     description: Estensioni ufficiali sul Marketplace per ABB Robotics — sintassi RAPID, snippet, integrazione RobotStudio.
-    tags: [typescript, vscode, RAPID, developer-tools]
+    tags: [vscode, RAPID, developer-tools]
 
 languages:
   - name: Italiano

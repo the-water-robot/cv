@@ -16,7 +16,7 @@ person:
 summary: >
   Robotics engineer with 10+ years at ABB in collaborative robots, from field
   support and customer projects to product innovation. I lead cobot technology
-  strategy and still ship production code in RAPID, TypeScript and Python — including
+  strategy and still ship production code in RAPID and JavaScript — including
   EasyRecord, now an official ABB RobotWare Add-In, and ABB's VS Code extensions on
   the Marketplace. I build with AI coding agents (Claude Code, GitHub Copilot)
   across the whole development cycle.
@@ -34,8 +34,8 @@ experience:
         - Drive technical strategy and product roadmap for the global cobot portfolio
         - Lead adoption of AI coding agents in the team's development workflow
       engineering:
-        - Rapid prototypes and POCs of cobot solutions with RAPID, RWS 2 and external APIs
-        - Direct production-code contributions (RAPID, JavaScript/TypeScript, Python) and AI agent tooling
+        - Rapid prototypes and POCs of cobot solutions with RAPID, RWS2, Python
+        - Direct production-code contributions (RAPID, JavaScript) and AI agent tooling
 
   - period:
       from: "2020-01"
@@ -46,12 +46,11 @@ experience:
     tags: [cobot, RAPID, RobotStudio, OmniCore, EGM, RWS, Force Control, ISO 10218, ISO/TS 15066, "Laser scanners (SICK, Keyence)", python, omnivance, easyrecord]
     highlights:
       leadership:
-        - Local technical reference for ABB's cobot portfolio (GoFa, YuMi, SWIFTI)
-        - Technologist for pre-sales, customer training and international trade shows
+        - Local technical reference for ABB's cobot portfolio
+        - Technologist for pre-sales, customer training and trade shows
       engineering:
         - "Created EasyRecord: lead-through path recording for cobots, behind landmark demos like YuMi conducting Andrea Bocelli"
-        - "Contributed to the OmniVance™ Collaborative Surface Finishing Cell: plug-and-play GoFa cell for sanding/polishing, cutting programming time by up to 90%"
-        - Force control and EGM (Externally Guided Motion) integration for collaborative finishing applications
+        - "OmniVance™ Collaborative Surface Finishing Cell software: plug-and-play GoFa cell for force-controlled sanding/polishing"
 
   - period:
       from: "2018-02"
@@ -59,7 +58,7 @@ experience:
     role: Cobot Product Engineering Specialist
     company: ABB Robotics
     location: Sesto San Giovanni, Italy
-    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio, Machine vision, Cognex, Keyence]
+    tags: [cobot, product-engineering, YuMi, RAPID, RobotStudio, "Machine vision (Cognex, Keyence)"]
     highlights:
       leadership: []
       engineering:
@@ -132,17 +131,17 @@ skills:
     - Innovation strategy
   technologies:
     Robotics: [RAPID, RobotStudio, OmniCore, RWS, EGM, Force Control, ROS 2]
-    Vision: [Machine vision, Cognex, Keyence]
-    Safety: [ISO 10218, ISO/TS 15066, "Laser scanners (SICK, Keyence)"]
-    Automation: [PLC, B&R]
-    Web: [Three.js, Digital twin, MkDocs]
+    Vision: ["Machine vision (Cognex, Keyence)"]
+    Safety: [ISO/TS 15066, "Laser scanners (SICK, Keyence)"]
+    Automation: ["PLC/HMI B&R"]
+    Web: [Three.js, MkDocs]
     AI tools: [Claude Code, GitHub Copilot]
 
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
     url: https://www.abb.com/global/en/areas/robotics/solutions/application-cells/omnivance-collaborative-surface-finishing-cell
     role: Cobot specialist contributor
-    description: Plug-and-play GoFa cell for automated sanding & polishing with integrated force control. Up to 90% less programming time.
+    description: Plug-and-play GoFa cell for force-controlled sanding & polishing, keeping a constant contact force on the part.
     tags: [cobot, GoFa, force-control, finishing]
 
   - name: EasyRecord
@@ -155,7 +154,7 @@ projects:
     url: "https://marketplace.visualstudio.com/publishers/abb-robotics-ecosystem"
     role: Publisher / lead developer
     description: Official Marketplace extensions for ABB Robotics — RAPID syntax, snippets, RobotStudio integration.
-    tags: [typescript, vscode, RAPID, developer-tools]
+    tags: [vscode, RAPID, developer-tools]
 
 languages:
   - name: Italian
