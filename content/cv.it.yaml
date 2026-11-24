@@ -141,7 +141,7 @@ skills:
 projects:
   - name: OmniVance™ Collaborative Surface Finishing Cell
     url: https://www.abb.com/global/en/areas/robotics/solutions/application-cells/omnivance-collaborative-surface-finishing-cell
-    role: Cobot specialist contributor
+    role: Software engineer & developer
     description: Cella GoFa plug-and-play per sanding & polishing in Force Control, con forza di contatto costante sul pezzo.
     tags: [cobot, GoFa, force-control, finishing]
 
