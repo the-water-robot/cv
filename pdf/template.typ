@@ -137,6 +137,10 @@
     {% else %}
     #text(size: 7.5pt, weight: "semibold", {{ proj.name | t }})
     {% endif %}
+    {% if proj.role %}
+    #linebreak()
+    #text(size: 7pt, fill: muted, {{ proj.role | t }})
+    {% endif %}
     #linebreak()
     #text(size: 7pt, {{ proj.description | t }})
     #v(3pt)
